@@ -1,5 +1,5 @@
 import { initHeaderMenu } from './modules/header_menu.js'
+import { initTestimonialSlider } from './modules/index_utilities.js';
 
-console.log('hello')
 initHeaderMenu();
-
+initTestimonialSlider(document.querySelector(".testimonial-page"));

@@ -467,7 +467,7 @@
                     aria-label="Customer testimonials"
                     tabindex="0"
                     >
-                    <li class="testimonial-item is-active" aria-current="true">
+                    <li class="testimonial-item is-active" aria-current="true" aria-hidden="false">
                         <figure class="testimonial-card">
                         <blockquote class="customer-quote">
                             <p>
@@ -482,7 +482,7 @@
                         </figure>
                     </li>
 
-                    <li class="testimonial-item" aria-hidden="true">
+                    <li class="testimonial-item" aria-current="false" aria-hidden="true">
                         <figure class="testimonial-card">
                         <blockquote class="customer-quote">
                             <p>
@@ -497,7 +497,7 @@
                         </figure>
                     </li>
 
-                    <li class="testimonial-item" aria-hidden="true">
+                    <li class="testimonial-item" aria-current="false" aria-hidden="true" >
                         <figure class="testimonial-card">
                         <blockquote class="customer-quote">
                             <p>
@@ -515,23 +515,25 @@
                 </div>
 
                 <div class="testimonial-controls" aria-label="Testimonials navigation">
-                    <button
+                <button
+                    id="testimonial-prev"
                     class="testimonial-btn"
                     type="button"
                     aria-label="Previous testimonial"
                     aria-controls="testimonial-list"
                     >
                     <span aria-hidden="true">←</span>
-                    </button>
+                </button>
 
-                    <button
+                <button
+                    id="testimonial-next"
                     class="testimonial-btn"
                     type="button"
                     aria-label="Next testimonial"
                     aria-controls="testimonial-list"
                     >
                     <span aria-hidden="true">→</span>
-                    </button>
+                </button>
                 </div>
             </section>
 
