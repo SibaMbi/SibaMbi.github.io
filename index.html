@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Easy Storage</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/default.css">
+        <link rel="stylesheet" href="css/index.css">
+        <script type="module" src="js/index.js" defer></script>
+    </head>
+    <body>
+        <header class="site-header" id="site-header">
+        <a class="skip-link" href="#main">Skip to main content</a>
+
+        <!-- Top services nav -->
+        <nav class="top-nav" aria-label="Service categories">
+            <ul class="top-nav-list" id="top-menu">
+            <li class="top-nav-item"><a class="top-nav-link" href="#">Personal Storage</a></li>
+            <li class="top-nav-item"><a class="top-nav-link" href="#">Business Storage</a></li>
+            <li class="top-nav-item"><a class="top-nav-link" href="#">Relocation Services</a></li>
+            <li class="top-nav-item"><a class="top-nav-link" href="#">Logistics Solutions</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main nav -->
+        <nav class="main-nav" aria-label="Main navigation">
+            <a class="site-logo" href="#" aria-label="Home">
+            <img src="images/logo.png" alt="Easy Storage">
+            </a>
+
+            <button
+            class="menu-icon"
+            id="toggle-btn"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="top-menu main-menu"
+            >
+            <span class="bar bar1" aria-hidden="true"></span>
+            <span class="bar bar2" aria-hidden="true"></span>
+            <span class="bar bar3" aria-hidden="true"></span>
+            </button>
+
+            <ul class="main-nav-list" id="main-menu">
+            <li class="main-nav-item"><a class="main-nav-link" href="#">Services</a></li>
+            <li class="main-nav-item"><a class="main-nav-link" href="#">Prices</a></li>
+            <li class="main-nav-item"><a class="main-nav-link" href="#">Store Locator</a></li>
+            <li class="main-nav-item"><a class="main-nav-link" href="#">About Us</a></li>
+
+            <li class="main-nav-item main-nav-item--cta">
+                <a class="main-nav-cta main-nav-link" href="#">Sign In</a>
+            </li>
+            </ul>
+        </nav>
+
+        <div class="mobile-menu-panel" id="mobile-menu-panel">
+            <nav class="top-nav" aria-label="Service categories">
+                <ul class="top-nav-list" id="mobile-top-menu">
+                <li class="top-nav-item"><a class="top-nav-link" href="#">Personal Storage</a></li>
+                <li class="top-nav-item"><a class="top-nav-link" href="#">Business Storage</a></li>
+                <li class="top-nav-item"><a class="top-nav-link" href="#">Relocation Services</a></li>
+                <li class="top-nav-item"><a class="top-nav-link" href="#">Logistics Solutions</a></li>
+                </ul>
+            </nav>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <ul class="main-nav-list" id="mobile-main-menu">
+                <li class="main-nav-item"><a class="main-nav-link" href="#">Services</a></li>
+                <li class="main-nav-item"><a class="main-nav-link" href="#">Prices</a></li>
+                <li class="main-nav-item"><a class="main-nav-link" href="#">Store Locator</a></li>
+                <li class="main-nav-item"><a class="main-nav-link" href="#">About Us</a></li>
+
+                <li class="main-nav-item main-nav-item--cta">
+                    <a class="main-nav-cta main-nav-link" href="#">Sign In</a>
+                </li>
+                </ul>
+            </nav>
+        </div>
+        </header>
+        <main class="landing-page">
+            <section class="hero" aria-labelledby="hero-title">
+                <div class="landing-heading">
+                    <h1 id="hero-title">
+                        Your Storage,<br>
+                        Simplified
+                    </h1>
+
+                    <p class="hero-subtitle">
+                        Simple, secure, and scalable storage for students,<br>
+                         movers, and growing businesses.
+                    </p>
+
+                    <!-- If this navigates somewhere, use <a>. If it opens a quote flow/modal, keep button. -->
+                    <button class="primary-cta btn btn-aqua-pill" type="button" aria-label="Get started with storage">
+                    Get Started
+                    </button>
+                </div>
+
+                <div class="landing-visual">
+                    <img
+                    src="images/concept_landing_page.png"
+                    alt="Illustration showing storage boxes and delivery collection"
+                    width="1200"
+                    height="800"
+                    loading="eager"
+                    decoding="async"
+                    >
+                </div>
+                <div class="hero-features" aria-label="How it works">
+                    <ul class="hero-features-list" role="list">
+                        <li class="hero-feature-card">
+                            <img
+                            class="hero-feature-image"
+                            src="images/storage_feature.png"
+                            alt=""
+                            aria-hidden="true"
+                            width="512"
+                            height="512"
+                            loading="lazy"
+                            decoding="async"
+                            >
+                            <h2 class="hero-feature-title">We collect</h2>
+                            <p class="hero-feature-text">From your doorstep, at a time<br> that suits you.</p>
+                        </li>
+                        <li class="hero-feature-card">
+                            <img
+                            class="hero-feature-image"
+                            src="images/warehouse_landing.png"
+                            alt=""
+                            aria-hidden="true"
+                            width="512"
+                            height="512"
+                            loading="lazy"
+                            decoding="async"
+                            >
+                            <h2 class="hero-feature-title">We store</h2>
+                            <p class="hero-feature-text">Safely stored in our<br> secure facilities.</p>
+                        </li>
+                        <li class="hero-feature-card">
+                            <img
+                            class="hero-feature-image"
+                            src="images/house_landing.png"
+                            alt=""
+                            aria-hidden="true"
+                            width="512"
+                            height="512"
+                            loading="lazy"
+                            decoding="async"
+                            >
+                            <h2 class="hero-feature-title">We deliver</h2>
+                            <p class="hero-feature-text">Delivered whenever and<br> wherever you need.</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="security-page section" aria-labelledby="security-title">
+                <div class="security-message">
+                    <h2 id="security-title">Security you can rely on</h2>
+                    <p>
+                    Your items are protected at every stage of the process. From secure collection
+                     to monitored storage facilities and controlled delivery, 
+                     we've built security into how we operate, not as an add-on,
+                      but as a standard.
+                    </p>
+                </div>
+                <div class="security-map">
+                    <iframe
+                    title="Map showing our service area"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d27067.312062400953!2d26.2658964!3d-32.003897300000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sza!4v1768416649172!5m2!1sen!2sza"
+                    style="border:0;"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    allowfullscreen
+                    ></iframe>
+                </div>
+                <div class="security-icons" aria-label="Security features">
+                    <ul class="security-icons-list" role="list">
+                    <li class="security-icon-card">
+                        <img class="security-icon-image" src="images/monitoring_icon.png" alt="" aria-hidden="true" width="256" height="256" loading="lazy" decoding="async">
+                        <h3 class="security-icon-title">CCTV Surveillance</h3>
+                    </li>
+
+                    <li class="security-icon-card">
+                        <img class="security-icon-image" src="images/secure_icon.png" alt="" aria-hidden="true" width="256" height="256" loading="lazy" decoding="async">
+                        <h3 class="security-icon-title">24/7 Monitoring</h3>
+                    </li>
+
+                    <li class="security-icon-card">
+                        <img class="security-icon-image" src="images/access_icons.png" alt="" aria-hidden="true" width="256" height="256" loading="lazy" decoding="async">
+                        <h3 class="security-icon-title">Controlled Access</h3>
+                    </li>
+
+                    <li class="security-icon-card">
+                        <img class="security-icon-image" src="images/handling_icon.png" alt="" aria-hidden="true" width="256" height="256" loading="lazy" decoding="async">
+                        <h3 class="security-icon-title">Secure Handling</h3>
+                    </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="collection-form section" aria-labelledby="collection-title">
+                <form class="collection-form-inner" action="#" method="post">
+                    <div class="collection-page">
+                    <header class="collection-header">
+                        <h2 id="collection-title">Organise your<br> storage</h2>
+                        <p class="collection-subtitle">Tell us where and when, we&#39;ll handle the rest</p>
+                    </header>
+
+                    <fieldset class="collection-fields" aria-describedby="collection-hint">
+                        <legend class="sr-only">Choose your dates</legend>
+                        <p id="collection-hint" class="sr-only">
+                        Select a collection date and a return date. Return date must be after collection date.
+                        </p>
+
+                        <div class="field">
+                        <label for="collection-date">Collection date</label>
+                        <input
+                            type="date"
+                            id="collection-date"
+                            name="collection-date"
+                            required
+                            autocomplete="off"
+                        >
+                        </div>
+
+                        <div class="field">
+                        <label for="return-date">Return date</label>
+                        <input
+                            type="date"
+                            id="return-date"
+                            name="return-date"
+                            required
+                            autocomplete="off"
+                        >
+                        </div>
+                    </fieldset>
+
+                    <div class="collection-action">
+                        <button class="collection-button btn btn-aqua-rect" type="submit">
+                        Get a quote
+                        </button>
+                    </div>
+                    </div>
+                </form>
+            </section>
+
+            <section class="about-us-page section" aria-labelledby="about-title">
+                <div class="about-sales">
+                    <header class="about-header">
+                    <h2 id="about-title">Trusted, proven and built for reliability</h2>
+                    </header>
+
+                    <dl class="about-stats" aria-label="Company highlights">
+                    <div class="about-stat">
+                        <dt class="about-stat-label">Average customer rating</dt>
+                        <dd class="about-stat-value">4.8 <span aria-hidden="true">★</span></dd>
+                    </div>
+
+                    <div class="about-stat">
+                        <dt class="about-stat-label">Deliveries completed</dt>
+                        <dd class="about-stat-value">1,252+</dd>
+                    </div>
+
+                    <div class="about-stat">
+                        <dt class="about-stat-label">Metropolitan areas served</dt>
+                        <dd class="about-stat-value">11+</dd>
+                    </div>
+
+                    <div class="about-stat">
+                        <dt class="about-stat-label">Collection window</dt>
+                        <dd class="about-stat-value">2-5</dd>
+                    </div>
+                    </dl>
+                </div>
+                <div class="about-benefits" aria-label="Why choose us">
+                    <article class="about-feature card">
+                    <svg class="about-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="70" height="70" fill="none" aria-hidden="true">
+                        <path d="M32 8l20 8v16c0 14-9 24-20 28C21 56 12 46 12 32V16l20-8Z"
+                        stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M24 34h16v14H24V34Z"
+                        stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M28 34v-4a4 4 0 1 1 8 0v4"
+                        stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M32 41v3"
+                        stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+
+                    <h3 class="about-feature-title">Secure and protected</h3>
+                    <ul class="about-feature-list" role="list">
+                        <li>Access-controlled, monitored facilities</li>
+                        <li>Items handled and stored with care</li>
+                        <li>Designed to keep your belongings safe</li>
+                    </ul>
+                    </article>
+
+                    <article class="about-feature card">
+                    <svg class="about-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="70" height="70" fill="none" aria-hidden="true">
+                        <path d="M46 27c0 7-10 19-10 19S26 34 26 27a10 10 0 1 1 20 0Z"
+                        stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="36" cy="27" r="3"
+                        stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10 40h18v14H10V40Z"
+                        stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10 40l9-6 9 6"
+                        stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M19 34v20"
+                        stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6 44h3M4 48h5M6 52h3"
+                        stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+
+                    <h3 class="about-feature-title">Convenient by design</h3>
+                    <ul class="about-feature-list" role="list">
+                        <li>Door-to-door collection and return</li>
+                        <li>We handle lifting, transport, and storage</li>
+                        <li>Simple online booking and scheduling</li>
+                    </ul>
+                    </article>
+
+                    <article class="about-feature card">
+                    <svg class="about-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="70" height="70" fill="none" aria-hidden="true">
+                        <rect x="12" y="34" width="24" height="16" rx="3"
+                        stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+                        <path d="M12 34l12-8 12 8"
+                        stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+                        <rect x="28" y="18" width="24" height="16" rx="3"
+                        stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+                        <path d="M28 18l12-8 12 8"
+                        stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+                        <path d="M48 46v-8M44 42l4-4 4 4"
+                        stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16 18v8M12 22l4 4 4-4"
+                        stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+
+                    <h3 class="about-feature-title">Flexible to your needs</h3>
+                    <ul class="about-feature-list" role="list">
+                        <li>Short-term, seasonal, and long-term storage</li>
+                        <li>Ideal for students, movers, and businesses</li>
+                        <li>Change unit size anytime</li>
+                    </ul>
+                    </article>
+
+                    <article class="about-feature card">
+                    <svg class="about-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="70" height="70" fill="none" aria-hidden="true">
+                        <path d="M11 28V14h14l26 26a6 6 0 0 1 0 8l-9 9a6 6 0 0 1-8 0L11 28Z"
+                        stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="20.5" cy="20.5" r="2.5"
+                        stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M33 31l-10 10"
+                        stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+
+                    <h3 class="about-feature-title">Affordable storage</h3>
+                    <ul class="about-feature-list" role="list">
+                        <li>Transparent pricing with no hidden fees</li>
+                        <li>Pay only for the space you use</li>
+                        <li>No long-term contracts required</li>
+                    </ul>
+                    </article>
+                </div>
+            </section>
+            <section class="services-page section" aria-labelledby="services-title">
+                <header class="services-message">
+                    <h2 id="services-title">Our Services</h2>
+                    <p>
+                    We provide flexible storage, moving, and logistics services for both individuals and businesses.
+                    Whether you need short-term space, a direct move, or ongoing transport, we handle your items securely.
+                    </p>
+                </header>
+
+            <ul class="services-grid" role="list" aria-label="Service offerings">
+                <li class="service-card card">
+                <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M4 9l8-4 8 4-8 4-8-4z"/>
+                    <path d="M4 9v8l8 4 8-4V9"/>
+                    <path d="M12 13v8"/>
+                    <circle cx="6.6" cy="6.2" r="1.3"/>
+                    <path d="M4.8 8.6c.6-.6 2.4-.6 3 0"/>
+                </svg>
+
+                <h3 class="service-title">Personal Storage</h3>
+                <p class="service-text">
+                    Our personal storage service is designed for everyday life changes, whether you're storing seasonal items,
+                    moving between places, studying, or simply freeing up space at home.
+                </p>
+                <a class="service-link" href="#">Learn more</a>
+                </li>
+
+                <li class="service-card card">
+                <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 50 50" fill="currentColor" aria-hidden="true">
+                    <g transform="translate(50 0) scale(-1 1)">
+                    <path d="M8 2L8 6L4 6L4 48L46 48L46 14L30 14L30 6L26 6L26 2 Z M 10 4L24 4L24 8L28 8L28 46L19 46L19 39L15 39L15 46L6 46L6 8L10 8 Z M 10 10L10 12L12 12L12 10 Z M 14 10L14 12L16 12L16 10 Z M 18 10L18 12L20 12L20 10 Z M 22 10L22 12L24 12L24 10 Z M 10 15L10 19L12 19L12 15 Z M 14 15L14 19L16 19L16 15 Z M 18 15L18 19L20 19L20 15 Z M 22 15L22 19L24 19L24 15 Z M 30 16L44 16L44 46L30 46 Z"/>
+                    </g>
+                </svg>
+
+                <h3 class="service-title">Business Storage</h3>
+                <p class="service-text">
+                    Business storage built for flexibility and growth. We store inventory, equipment, documents, and operational assets
+                    for businesses that need space without long-term commitments.
+                </p>
+                <a class="service-link" href="#">Learn more</a>
+                </li>
+
+                <li class="service-card card">
+                <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M3 15V9h11v6"/>
+                    <path d="M14 11h4l3 3v1h-7v-4z"/>
+                    <circle cx="7" cy="17" r="1.8"/>
+                    <circle cx="18" cy="17" r="1.8"/>
+                    <path d="M3 15h18"/>
+                    <path d="M6 7h9"/>
+                    <path d="M13.5 5.5L15 7l-1.5 1.5"/>
+                </svg>
+
+                <h3 class="service-title">Relocation Services</h3>
+                <p class="service-text">
+                    Our moving service focuses on direct, efficient relocations from Point A to Point B.
+                    We handle home and office moves with careful loading, secure transport, and timely delivery.
+                </p>
+                <a class="service-link" href="#">Learn more</a>
+                </li>
+
+                <li class="service-card card">
+                <svg class="service-icon" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M3 21h18"/>
+                    <path d="M18 5v14"/>
+                    <path d="M16.2 5h3.6"/>
+                    <path d="M18 16h-5"/>
+                    <path d="M13 16v3"/>
+                    <path d="M18 19h-5"/>
+                    <path d="M6 18V9h8v9"/>
+                    <path d="M6 9l2-3h6l0 3"/>
+                    <path d="M9 12h2.5"/>
+                    <path d="M10.5 18h2.5v-3h-2.5z"/>
+                    <circle cx="8" cy="19" r="1.7"/>
+                    <circle cx="13.5" cy="19" r="1.7"/>
+                </svg>
+
+                <h3 class="service-title">Logistics Solutions</h3>
+                <p class="service-text">
+                    Our logistics service supports businesses that require consistent, ongoing movement of goods.
+                    We manage scheduled collections, stock transfers, and repeat deliveries with reliability and precision.
+                </p>
+                <a class="service-link" href="#">Learn more</a>
+                </li>
+            </ul>
+            </section>
+
+            <section class="testimonial-page section" aria-labelledby="testimonials-title">
+                <div class="testimonial-left">
+                    <header class="testimonial-header">
+                    <h2 id="testimonials-title">From Our Community</h2>
+                    <p>Here's what real customers have to say about their experience with us.</p>
+                    </header>
+                </div>
+
+                <div class="testimonial-right">
+                    <ul
+                    class="testimonial-list"
+                    id="testimonial-list"
+                    role="list"
+                    aria-live="polite"
+                    aria-atomic="true"
+                    aria-label="Customer testimonials"
+                    tabindex="0"
+                    >
+                    <li class="testimonial-item is-active" aria-current="true">
+                        <figure class="testimonial-card">
+                        <blockquote class="customer-quote">
+                            <p>
+                            After exams I needed somewhere safe to store my things for December without dragging everything back home.
+                            They collected my boxes from my place and returned them when I came back. It made the whole break stress-free.
+                            </p>
+                        </blockquote>
+                        <figcaption class="customer-meta">
+                            <span class="customer-name">Student</span>
+                            <span class="customer-detail">December storage</span>
+                        </figcaption>
+                        </figure>
+                    </li>
+
+                    <li class="testimonial-item" aria-hidden="true">
+                        <figure class="testimonial-card">
+                        <blockquote class="customer-quote">
+                            <p>
+                            We use them to move stock between locations and handle regular deliveries. Everything is reliable and on schedule,
+                            which has taken a lot of pressure off our day-to-day operations.
+                            </p>
+                        </blockquote>
+                        <figcaption class="customer-meta">
+                            <span class="customer-name">Business owner</span>
+                            <span class="customer-detail">Ongoing logistics</span>
+                        </figcaption>
+                        </figure>
+                    </li>
+
+                    <li class="testimonial-item" aria-hidden="true">
+                        <figure class="testimonial-card">
+                        <blockquote class="customer-quote">
+                            <p>
+                            Moving can be chaotic, but this was straightforward from start to finish. They handled everything carefully and
+                            delivered to our new place on time with no issues.
+                            </p>
+                        </blockquote>
+                        <figcaption class="customer-meta">
+                            <span class="customer-name">Homeowner</span>
+                            <span class="customer-detail">Local move</span>
+                        </figcaption>
+                        </figure>
+                    </li>
+                    </ul>
+                </div>
+
+                <div class="testimonial-controls" aria-label="Testimonials navigation">
+                    <button
+                    class="testimonial-btn"
+                    type="button"
+                    aria-label="Previous testimonial"
+                    aria-controls="testimonial-list"
+                    >
+                    <span aria-hidden="true">←</span>
+                    </button>
+
+                    <button
+                    class="testimonial-btn"
+                    type="button"
+                    aria-label="Next testimonial"
+                    aria-controls="testimonial-list"
+                    >
+                    <span aria-hidden="true">→</span>
+                    </button>
+                </div>
+            </section>
+
+            <section class="cta-page section" aria-labelledby="cta-title">
+                <div class="container cta-inner">
+                    <header class="cta-message">
+                    <h2 id="cta-title">See how Amburus can simplify your life</h2>
+                    </header>
+
+                    <div class="cta-actions" aria-label="Call to action buttons">
+                        <button class="action btn btn-light-rect" id="quote-button" type="button">
+                            Get A Quote
+                        </button>
+
+                        <button class="action btn btn-light-rect" id="sign-in-button" type="button">
+                            Sign Up
+                        </button>
+                    </div>
+                </div>
+            </section>    
+        </main>
+
+        <footer class="site-footer" aria-labelledby="footer-title">
+            <div class="footer-content container">
+                <div class="footer-contact">
+                <header class="footer-header">
+                    <h3 id="footer-title">Need more information?</h3>
+                    <p>Leave your details and we&#39;ll point you in the right direction.</p>
+                </header>
+
+                    <form class="footer-contact-form" action="#" method="post">
+                        <div class="contact-field">
+                            <label for="user-email">Email Address</label>
+                            <input
+                                type="email"
+                                id="user-email"
+                                name="user-email"
+                                placeholder="you@example.com"
+                                autocomplete="email"
+                                required
+                            >
+                        </div>
+
+                        <div class="contact-field">
+                            <label for="user-number">Phone Number</label>
+                            <input
+                                type="tel"
+                                id="user-number"
+                                name="user-number"
+                                placeholder="+27 00 000 0000"
+                                autocomplete="tel"
+                                required
+                            >
+                        </div>
+
+                        <div class="contact-field">
+                            <label for="user-message">Message</label>
+                            <textarea
+                                id="user-message"
+                                name="user-message"
+                                rows="3"
+                                maxlength="250"
+                                placeholder="Tell us a bit about what you need…"
+                            ></textarea>
+                        </div>
+
+                        <div class="form-action">
+                            <button type="submit" class="submit-form btn btn-aqua-rect">
+                                Submit Enquiry
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="footer-links" aria-label="footer-links">
+                    <nav class="service-links" aria-label="Services links">
+                        <h3 class="footer-title">Services</h3>
+                        <ul class="footer-list" role="list">
+                            <li><a href="#">Personal storage</a></li>
+                            <li><a href="#">Business storage</a></li>
+                            <li><a href="#">Moving</a></li>
+                            <li><a href="#">Logistics</a></li>
+                        </ul>
+                    </nav>
+
+                    <nav class="company-links" aria-label="Company links">
+                        <h3 class="footer-title">Company</h3>
+                        <ul class="footer-list" role="list">
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Insurance</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="socials" aria-label="Social links">
+                    <a class="social-link" href="#" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="1.8"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="3.5" y="3.5" width="17" height="17" rx="4"/>
+                        <circle cx="12" cy="12" r="4"/>
+                        <path d="M16.8 7.2h.01"/>
+                        </svg>
+                    </a>
+
+                    <a class="social-link" href="#" aria-label="Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="1.8"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="3.5" y="3.5" width="17" height="17" rx="4"/>
+                        <path d="M13.5 21v-7h2.2l.4-2.6h-2.6V9.8c0-.8.2-1.3 1.4-1.3h1.3V6.2c-.6-.1-1.3-.2-2.1-.2-2.1 0-3.5 1.3-3.5 3.7V11H8.5v2.6h2.1v7"/>
+                        </svg>
+                    </a>
+
+                    <a class="social-link" href="#" aria-label="WhatsApp">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="1.8"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M20 11.7c0 4.4-3.6 8-8 8-1.3 0-2.6-.3-3.7-.9L4 20l1.2-4.1c-.7-1.2-1-2.6-1-4.2 0-4.4 3.6-8 8-8s8 3.6 8 8z"/>
+                        <path d="M9.2 8.8c.2-.5.4-.6.8-.6h.6c.2 0 .4 0 .6.5l.7 1.7c.1.3.1.5 0 .7l-.4.5c-.2.2-.2.4 0 .7.4.7 1.2 1.6 2.2 2.2.3.2.5.2.7 0l.6-.4c.2-.1.4-.1.7 0l1.7.7c.4.2.5.4.5.6v.6c0 .4-.2.7-.6.8-.6.2-1.8.5-3.5-.3-1.8-.8-3.2-2.3-4-4-.8-1.7-.5-2.9-.3-3.5z"/>
+                        </svg>
+                    </a>
+
+                    <a class="social-link" href="#" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="1.8"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <rect x="3.5" y="3.5" width="17" height="17" rx="4"/>
+                        <path d="M7.5 10.5V17"/>
+                        <path d="M7.5 8.2h.01"/>
+                        <path d="M11 17v-3.6c0-1.5.6-2.4 2-2.4 1.2 0 1.8.9 1.8 2.4V17"/>
+                        <path d="M11 10.5V17"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
