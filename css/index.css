@@ -44,6 +44,7 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  -webkit-user-drag: none;
 }
 
 h1, h2, h3, h4, h5 {
@@ -332,15 +333,28 @@ a:focus-visible {
 
 @media (max-width: 767px) {
   .mobile-menu-panel {
-    display: none;
-  }
-  /* JS will toggle: .site-header.is-menu-open */
-  .site-header.is-menu-open .mobile-menu-panel {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     background-color: rgb(253, 252, 253);
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-10px);
+    padding: 0;
+    pointer-events: none;
+    transition: max-height 0.3s ease, opacity 0.25s ease, transform 0.35s ease, padding 0.35s ease;
+  }
+  /* JS will toggle: .site-header.is-menu-open */
+  .site-header.is-menu-open .mobile-menu-panel {
+    max-height: 100vh;
+    opacity: 1;
+    transform: translateY(0);
     padding: 0.5rem 0.5rem 0.75rem;
+    pointer-events: auto;
   }
   .site-header.is-menu-open .mobile-menu-panel .top-nav,
   .site-header.is-menu-open .mobile-menu-panel .main-nav {
@@ -463,10 +477,24 @@ a:focus-visible {
   display: flex;
   overflow-x: auto;
   overflow-y: hidden;
+  /* For Internet Explorer and Edge */
+  -ms-overflow-style: none;
+  /* For Firefox */
+  scrollbar-width: none;
+}
+.hero-features-list ::-webkit-scrollbar {
+  display: none;
+}
+.hero-features-list {
   margin: 0;
   padding: 0;
   align-items: stretch;
   width: 100%;
+  /* important */
+  cursor: grab;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  touch-action: pan-x;
 }
 
 .hero-feature-card {
@@ -724,10 +752,24 @@ a:focus-visible {
   display: flex;
   overflow-x: auto;
   overflow-y: hidden;
+  /* For Internet Explorer and Edge */
+  -ms-overflow-style: none;
+  /* For Firefox */
+  scrollbar-width: none;
+}
+.about-benefits ::-webkit-scrollbar {
+  display: none;
+}
+.about-benefits {
   margin: 0;
   padding: 0;
   align-items: stretch;
   width: 100%;
+  /* important */
+  cursor: grab;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  touch-action: pan-x;
 }
 
 /* Cards */
@@ -801,10 +843,24 @@ a:focus-visible {
   display: flex;
   overflow-x: auto;
   overflow-y: hidden;
+  /* For Internet Explorer and Edge */
+  -ms-overflow-style: none;
+  /* For Firefox */
+  scrollbar-width: none;
+}
+.services-grid ::-webkit-scrollbar {
+  display: none;
+}
+.services-grid {
   margin: 0;
   padding: 0;
   align-items: stretch;
   width: 100%;
+  /* important */
+  cursor: grab;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  touch-action: pan-x;
   gap: 30px;
   align-items: stretch;
   /* IMPORTANT: allow wrapping inside cards on Firefox */
@@ -911,6 +967,7 @@ a:focus-visible {
   width: 100%;
   display: flex;
   justify-content: center;
+  height: 240px;
 }
 
 .testimonial-list {
@@ -1540,7 +1597,7 @@ a:focus-visible {
   }
   .landing-heading h1 {
     padding-top: 1rem;
-    font-size: clamp(2.9rem, 5.2vw, 4.8rem);
+    font-size: clamp(3rem, 5.5vw, 5rem);
   }
   .about-us-page {
     display: grid;
@@ -1576,6 +1633,7 @@ a:focus-visible {
     grid-row: 1/3; /* quote spans both rows so controls sit beside it */
     justify-content: flex-start;
     width: auto;
+    height: 350px;
   }
   /* controls under left header, centered within the left column */
   .testimonial-controls {

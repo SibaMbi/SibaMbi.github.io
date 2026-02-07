@@ -84,3 +84,61 @@ export function initTestimonialSlider(root) {
   idx = idx < 0 ? 0 : idx;
   applyState(idx);
 }
+
+export function enableDragScrollX(container) {
+  if (!container || !(container instanceof HTMLElement)) return;
+
+  let isDown = false;
+  let startX = 0;
+  let scrollStart = 0;
+  let wasDragged = false;
+  const dragThreshold = 6;
+
+  // Keep styles minimal; works on lists, divs, sections, etc.
+  if (!container.style.cursor) container.style.cursor = "grab";
+  if (!container.style.touchAction) container.style.touchAction = "pan-y";
+
+  function onPointerDown(e) {
+    if (e.pointerType === "mouse" && e.button !== 0) return;
+
+    isDown = true;
+    wasDragged = false;
+    startX = e.clientX;
+    scrollStart = container.scrollLeft;
+    container.style.cursor = "grabbing";
+    container.style.userSelect = "none";
+    container.setPointerCapture?.(e.pointerId);
+  }
+
+  function onPointerMove(e) {
+    if (!isDown) return;
+
+    const deltaX = e.clientX - startX;
+    if (Math.abs(deltaX) >= dragThreshold) wasDragged = true;
+
+    container.scrollLeft = scrollStart - deltaX;
+  }
+
+  function endDrag(e) {
+    if (!isDown) return;
+
+    isDown = false;
+    container.style.cursor = "grab";
+    container.style.userSelect = "";
+    container.releasePointerCapture?.(e.pointerId);
+  }
+
+  function onClickCapture(e) {
+    if (!wasDragged) return;
+    e.preventDefault();
+    e.stopPropagation();
+    wasDragged = false;
+  }
+
+  container.addEventListener("pointerdown", onPointerDown);
+  container.addEventListener("pointermove", onPointerMove);
+  container.addEventListener("pointerup", endDrag);
+  container.addEventListener("pointerleave", endDrag);
+  container.addEventListener("pointercancel", endDrag);
+  container.addEventListener("click", onClickCapture, true);
+}
