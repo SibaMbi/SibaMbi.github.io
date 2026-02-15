@@ -1,0 +1,22 @@
+// Colors
+$ink: rgb(6, 6, 50);
+$ink-2: rgb(27, 27, 82);
+$accent: aqua;
+$bg: rgb(253, 252, 253);
+$topnav-bg: rgb(41, 38, 38);
+
+// Shadows
+$shadow-soft: 0px 0.5px 1.5px 1px rgba(207, 204, 204, 0.33);
+$shadow-hover: 0 2px 4px rgba(116, 114, 114, 0.5);
+$shadow-nav: 0 1px 2px rgba(0, 0, 0, .12);
+
+// Radius
+$radius-sm: 0.3rem;
+$radius-md: 0.6rem;
+$radius-lg: 1.2rem;
+$radius-pill: 1.5em;
+
+// Layout
+$container-max: 1100px;
+$gutter: clamp(1rem, 3vw, 2rem);
+

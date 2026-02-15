@@ -1,0 +1,92 @@
+@use "variables" as *;
+@mixin fluid-type($min, $pref, $max) {
+  font-size: clamp(#{$min}, #{$pref}, #{$max});
+}
+
+/* focus-visible + fallback */
+@mixin focus-ring($color: $accent, $offset: 4px) {
+  &:focus { outline: 2px solid $color; outline-offset: $offset; }
+  &:focus:not(:focus-visible) { outline: none; }
+  &:focus-visible { outline: 2px solid $color; outline-offset: $offset; }
+}
+
+@mixin link-aqua-underline {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: $accent;
+    text-underline-offset: 0.4em;
+  }
+
+  @include focus-ring($accent, 4px);
+}
+
+@mixin button-shadow-hover($duration: 0.4s) {
+  transition: box-shadow $duration ease-in-out;
+
+  &:hover { box-shadow: $shadow-hover; }
+  &:active { box-shadow: none; }
+
+  @include focus-ring($accent, 4px);
+}
+
+@mixin button-lift-hover($y: -1.4px) {
+  transition: transform 0.15s ease;
+
+  &:hover { transform: translateY($y); }
+  &:active { transform: translateY(0); }
+
+  @include focus-ring($accent, 4px);
+}
+
+@mixin card-soft($bg-color: rgba(251, 252, 253, 0.75), $radius: $radius-md) {
+  background-color: $bg-color;
+  border-radius: $radius;
+  box-shadow: $shadow-soft;
+}
+
+@mixin force-center {
+  width: min(100%, 40rem);   // choose a comfortable reading width
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  padding-inline: $gutter;
+}
+
+@mixin make-scrollable {
+  list-style: none;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+    /* For Internet Explorer and Edge */
+  -ms-overflow-style: none;
+  /* For Firefox */
+  scrollbar-width: none;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  margin: 0;
+  padding: 0;
+  align-items: stretch;
+  width: 100%;
+
+  /* important */
+  cursor: grab;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  touch-action: pan-x; // allow native horizontal touch scroll
+}
+
+@mixin scroll-feature {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  flex-shrink: 0;
+  cursor: grab;
+  margin: 1rem;
+  width: 85%;
+}
+
