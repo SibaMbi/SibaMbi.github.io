@@ -327,9 +327,9 @@ a:focus-visible {
 
 @media (max-width: 767px) {
   .mobile-menu-panel {
-    position: fixed;
+    position: relative;
     width: 100%;
-    height: 100vh;
+    height: 99vh;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
