@@ -116,7 +116,6 @@ a:focus-visible {
   outline-offset: 4px;
 }
 
-/* keep your existing class names as “public API” */
 .btn-aqua-pill {
   background-color: aqua;
   color: #fff;
@@ -471,9 +470,7 @@ a:focus-visible {
   display: flex;
   overflow-x: auto;
   overflow-y: hidden;
-  /* For Internet Explorer and Edge */
   -ms-overflow-style: none;
-  /* For Firefox */
   scrollbar-width: none;
 }
 .hero-features-list ::-webkit-scrollbar {
@@ -484,7 +481,6 @@ a:focus-visible {
   padding: 0;
   align-items: stretch;
   width: 100%;
-  /* important */
   cursor: grab;
   -webkit-overflow-scrolling: touch;
   overscroll-behavior-x: contain;
@@ -661,6 +657,7 @@ a:focus-visible {
 .field label {
   display: block;
   font-size: 1.2rem;
+  font-weight: 700;
   margin-bottom: 0.75rem;
   color: aqua;
   text-align: center;
@@ -746,9 +743,7 @@ a:focus-visible {
   display: flex;
   overflow-x: auto;
   overflow-y: hidden;
-  /* For Internet Explorer and Edge */
   -ms-overflow-style: none;
-  /* For Firefox */
   scrollbar-width: none;
 }
 .about-benefits ::-webkit-scrollbar {
@@ -759,7 +754,6 @@ a:focus-visible {
   padding: 0;
   align-items: stretch;
   width: 100%;
-  /* important */
   cursor: grab;
   -webkit-overflow-scrolling: touch;
   overscroll-behavior-x: contain;
@@ -837,9 +831,7 @@ a:focus-visible {
   display: flex;
   overflow-x: auto;
   overflow-y: hidden;
-  /* For Internet Explorer and Edge */
   -ms-overflow-style: none;
-  /* For Firefox */
   scrollbar-width: none;
 }
 .services-grid ::-webkit-scrollbar {
@@ -850,7 +842,6 @@ a:focus-visible {
   padding: 0;
   align-items: stretch;
   width: 100%;
-  /* important */
   cursor: grab;
   -webkit-overflow-scrolling: touch;
   overscroll-behavior-x: contain;

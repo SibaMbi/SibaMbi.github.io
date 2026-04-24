@@ -1,5 +1,4 @@
-@use "variables" as *;
-@use "mixins" as *;
+@use "core" as *;
 @mixin mobile-query {
   @media (max-width: 767px) {
     .mobile-menu-panel {

@@ -1,4 +1,25 @@
-@use "variables" as *;
+// Colors
+$ink: rgb(6, 6, 50);
+$ink-2: rgb(27, 27, 82);
+$accent: aqua;
+$bg: rgb(253, 252, 253);
+$topnav-bg: rgb(41, 38, 38);
+
+// Shadows
+$shadow-soft: 0px 0.5px 1.5px 1px rgba(207, 204, 204, 0.33);
+$shadow-hover: 0 2px 4px rgba(116, 114, 114, 0.5);
+$shadow-nav: 0 1px 2px rgba(0, 0, 0, .12);
+
+// Radius
+$radius-sm: 0.3rem;
+$radius-md: 0.6rem;
+$radius-lg: 1.2rem;
+$radius-pill: 1.5em;
+
+// Layout
+$container-max: 1100px;
+$gutter: clamp(1rem, 3vw, 2rem);
+
 @mixin fluid-type($min, $pref, $max) {
   font-size: clamp(#{$min}, #{$pref}, #{$max});
 }
@@ -47,7 +68,7 @@
 }
 
 @mixin force-center {
-  width: min(100%, 40rem);   // choose a comfortable reading width
+  width: min(100%, 40rem);
   margin-left: auto;
   margin-right: auto;
   text-align: left;
@@ -59,10 +80,9 @@
   display: flex;
   overflow-x: auto;
   overflow-y: hidden;
-    /* For Internet Explorer and Edge */
   -ms-overflow-style: none;
-  /* For Firefox */
   scrollbar-width: none;
+
   ::-webkit-scrollbar {
     display: none;
   }
@@ -71,8 +91,6 @@
   padding: 0;
   align-items: stretch;
   width: 100%;
-
-  /* important */
   cursor: grab;
   -webkit-overflow-scrolling: touch;
   overscroll-behavior-x: contain;
@@ -90,3 +108,41 @@
   width: 85%;
 }
 
+@mixin button-system {
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    cursor: pointer;
+    font-size: 1.2em;
+    line-height: 1;
+
+    @include focus-ring($accent, 4px);
+  }
+
+  .btn-aqua-pill {
+    background-color: $accent;
+    color: #fff;
+    border-radius: $radius-pill;
+    padding: 10px 20px;
+    @include button-shadow-hover;
+  }
+
+  .btn-aqua-rect {
+    background-color: $accent;
+    color: #fff;
+    border-radius: $radius-sm;
+    padding: 12px 22px;
+    @include button-shadow-hover;
+  }
+
+  .btn-light-rect {
+    background-color: #fff;
+    color: $ink;
+    border-radius: 0.4em;
+    padding: 10px 20px;
+    width: 150px;
+    @include button-lift-hover;
+  }
+}

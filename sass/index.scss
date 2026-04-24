@@ -1,6 +1,4 @@
-@use "variables" as *;
-@use "mixins" as *;
-@use "buttons" as buttons;
+@use "core" as *;
 @use "media-queries" as media;
 /* =========================
    A11Y UTILITIES
@@ -54,7 +52,7 @@ a { @include link-aqua-underline; }
 /* =========================
    BUTTON SYSTEM
 ========================= */
-@include buttons.button-system();
+@include button-system();
 /* =========================
    HEADER / NAV
 ========================= */
@@ -140,7 +138,7 @@ a { @include link-aqua-underline; }
   background-color: $accent;
   color: #fff;
   text-decoration: none;
-
+  
   padding: 1em 1.8em;
   border-radius: 0;
   margin-right: 10px;
@@ -424,6 +422,7 @@ a { @include link-aqua-underline; }
 .field label {
   display: block;
   font-size: 1.2rem;
+  font-weight: 700;
   margin-bottom: 0.75rem;
   color: $accent;
   text-align: center;
