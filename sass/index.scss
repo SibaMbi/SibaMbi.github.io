@@ -911,6 +911,7 @@ a { @include link-aqua-underline; }
 .submit-form {
   @extend .btn;
   @extend .btn-aqua-rect;
+  max-width: 350px;
 
   // keep your "grow" feel, but do it safely
   transition: transform 0.2s ease;
@@ -928,7 +929,9 @@ a { @include link-aqua-underline; }
 .footer-links {
   display: flex;
   flex: 1 1 auto;
-  gap: clamp(5rem, 7vw, 6rem);
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: clamp(2rem, 4vw, 3rem);
 }
 
 .footer-content a {
