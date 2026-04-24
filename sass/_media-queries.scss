@@ -204,6 +204,22 @@
       line-height: 1.4;
     }
 
+    .collection-fields {
+      flex-direction: column;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .collection-fields .field {
+      width: 100%;
+      max-width: 22rem;
+    }
+
+    .collection-fields .field input {
+      width: 100%;
+      padding-inline: 1rem;
+    }
+
     .footer-content {
       gap: 1.5rem;
       padding: 1.5rem 1rem 1.75rem;
