@@ -693,7 +693,6 @@ a { @include link-aqua-underline; }
   width: 100%;
   display: flex;
   justify-content: center;
-  height: max-content;
 }
 
 .testimonial-list {
@@ -844,16 +843,14 @@ a { @include link-aqua-underline; }
   display: flex;
   flex-direction: column;
   gap: 2rem 2.5rem;
-  padding: clamp(1.8rem, 4vw, 2.7rem);
+  padding: clamp(2rem, 4.5vw, 3rem);
   align-items: start;
-  width: 100%;
 }
 
 .footer-header h3 {
-  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-size: 2.2rem;
   margin: 0 0 5px 0;
   color: #fff;
-  line-height: 1.12;
 }
 
 .company-links h3, .service-links h3 {
@@ -861,16 +858,14 @@ a { @include link-aqua-underline; }
 }
 
 .footer-header p {
-  font-size: clamp(1.1rem, 4vw, 1.4rem);
+  font-size: 1.1rem;
   margin: 0 0 20px 0;
   color: #fff;
-  line-height: 1.65;
 }
 
 .footer-title {
-  font-size: clamp(1.05rem, 4vw, 1.3rem);
+  font-size: 1.3rem;
   margin: 0 0 15px 0;
-  line-height: 1.25;
 }
 
 .footer-list {
@@ -886,9 +881,8 @@ a { @include link-aqua-underline; }
 .footer-contact label {
   margin-top: 1.2rem;
   display: block;
-  font-size: clamp(0.95rem, 3.4vw, 1.2rem);
+  font-size: 1.2rem;
   margin-bottom: 0.6rem;
-  line-height: 1.35;
 }
 
 .footer-contact input,
@@ -898,10 +892,10 @@ a { @include link-aqua-underline; }
   padding: 0.8rem 1.5rem;
   border: 0;
   border-radius: $radius-sm;
-  font-size: clamp(1rem, 3.8vw, 1.2rem);
+  font-size: 1.2rem;
 
-  max-width: 350px;
-  max-height: 170px;
+  width: min(350px, 100%);
+  max-height: 200px;
 
   &:hover {
     background-color: rgb(250, 255, 255);
@@ -917,7 +911,6 @@ a { @include link-aqua-underline; }
 .submit-form {
   @extend .btn;
   @extend .btn-aqua-rect;
-  max-width: 350px;
 
   // keep your "grow" feel, but do it safely
   transition: transform 0.2s ease;
@@ -936,23 +929,11 @@ a { @include link-aqua-underline; }
   display: flex;
   flex: 1 1 auto;
   gap: clamp(5rem, 7vw, 6rem);
-  width: 100%;
-  flex-wrap: wrap;
-}
-
-.footer-contact,
-.footer-links,
-.socials,
-.service-links,
-.company-links {
-  width: 100%;
-  min-width: 0;
 }
 
 .footer-content a {
   color: white;
   text-decoration: none;
-  overflow-wrap: anywhere;
 
   &:hover {
     color: $accent;
