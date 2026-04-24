@@ -498,6 +498,46 @@ a:focus-visible {
     font-size: 1rem;
     line-height: 1.4;
   }
+  .footer-content {
+    gap: 1.5rem;
+    padding: 1.5rem 1rem 1.75rem;
+  }
+  .footer-header h3 {
+    font-size: clamp(1.45rem, 7vw, 1.9rem);
+    margin-bottom: 0.35rem;
+  }
+  .footer-header p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+  .footer-title {
+    font-size: clamp(1rem, 4.5vw, 1.15rem);
+    margin-bottom: 0.75rem;
+  }
+  .footer-links {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .footer-list li,
+  .footer-content a {
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+  .footer-contact label {
+    margin-top: 0.9rem;
+    margin-bottom: 0.45rem;
+  }
+  .footer-contact input,
+  .footer-contact textarea,
+  .submit-form {
+    width: 100%;
+    max-width: 100%;
+  }
+  .socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
   .footer-header h3,
   .footer-title,
   .customer-name {
@@ -1219,13 +1259,15 @@ a:focus-visible {
   gap: 2rem 2.5rem;
   padding: clamp(2rem, 4.5vw, 3rem);
   align-items: start;
+  width: 100%;
 }
 
 .footer-header h3 {
-  font-size: 2.2rem;
+  font-size: clamp(1.8rem, 6vw, 2.2rem);
   margin: 0 0 5px 0;
   color: #fff;
-  text-wrap: nowrap;
+  line-height: 1.12;
+  text-wrap: balance;
 }
 
 .company-links h3, .service-links h3 {
@@ -1233,14 +1275,17 @@ a:focus-visible {
 }
 
 .footer-header p {
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 3.4vw, 1.1rem);
   margin: 0 0 20px 0;
   color: #fff;
+  line-height: 1.65;
 }
 
 .footer-title {
-  font-size: 1.3rem;
+  font-size: clamp(1.05rem, 4vw, 1.3rem);
   margin: 0 0 15px 0;
+  line-height: 1.25;
+  text-wrap: balance;
 }
 
 .footer-list {
@@ -1255,8 +1300,9 @@ a:focus-visible {
 .footer-contact label {
   margin-top: 1.2rem;
   display: block;
-  font-size: 1.2rem;
+  font-size: clamp(0.95rem, 3.8vw, 1.2rem);
   margin-bottom: 0.6rem;
+  line-height: 1.35;
 }
 
 .footer-contact input,
@@ -1266,8 +1312,9 @@ a:focus-visible {
   padding: 0.8rem 1.5rem;
   border: 0;
   border-radius: 0.3rem;
-  font-size: 1.2rem;
-  width: min(350px, 100%);
+  font-size: clamp(1rem, 3.8vw, 1.2rem);
+  width: 100%;
+  max-width: 350px;
   max-height: 200px;
 }
 .footer-contact input:hover,
@@ -1294,6 +1341,7 @@ a:focus-visible {
 }
 
 .submit-form {
+  max-width: 350px;
   transition: transform 0.2s ease;
 }
 .submit-form:hover {
@@ -1308,11 +1356,23 @@ a:focus-visible {
   display: flex;
   flex: 1 1 auto;
   gap: clamp(5rem, 7vw, 6rem);
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.footer-contact,
+.footer-links,
+.socials,
+.service-links,
+.company-links {
+  width: 100%;
+  min-width: 0;
 }
 
 .footer-content a {
   color: white;
   text-decoration: none;
+  overflow-wrap: anywhere;
 }
 .footer-content a:hover {
   color: aqua;
