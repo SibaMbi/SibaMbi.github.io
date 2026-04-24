@@ -6,7 +6,9 @@
     }
 
     body {
+      font-size: 1rem;
       line-height: 1.6;
+      text-rendering: optimizeLegibility;
     }
 
     .site-header {
@@ -100,29 +102,45 @@
       line-height: 1.6;
     }
 
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      line-height: 1.18;
+      letter-spacing: -0.015em;
+      overflow-wrap: anywhere;
+    }
+
     .btn,
     .main-nav-cta,
     .collection-button,
     .submit-form {
       font-size: 1rem;
+      line-height: 1.2;
     }
 
     .landing-heading h1 {
-      @include fluid-type(2.75rem, 10vw, 3.5rem);
-      line-height: 1.08;
+      @include fluid-type(2.35rem, 9vw, 3rem);
+      line-height: 1.06;
+      letter-spacing: -0.03em;
+      text-wrap: balance;
     }
 
     .hero-subtitle {
-      font-size: 1.05rem;
-      line-height: 1.65;
+      font-size: 1rem;
+      line-height: 1.7;
+      max-width: 32ch;
+      text-wrap: pretty;
     }
 
     .hero-feature-title,
     .about-feature-title,
     .service-title,
     .security-icon-title {
-      @include fluid-type(1.2rem, 4.6vw, 1.45rem);
-      line-height: 1.25;
+      @include fluid-type(1.15rem, 4.8vw, 1.35rem);
+      line-height: 1.22;
+      text-wrap: balance;
     }
 
     .hero-feature-text,
@@ -134,7 +152,8 @@
     .customer-quote p,
     .footer-header p {
       font-size: 1rem;
-      line-height: 1.65;
+      line-height: 1.7;
+      text-wrap: pretty;
     }
 
     .security-message h2,
@@ -144,8 +163,10 @@
     .testimonial-header h2,
     .cta-message h2,
     .footer-header h3 {
-      @include fluid-type(2rem, 7vw, 2.5rem);
-      line-height: 1.15;
+      @include fluid-type(1.8rem, 7vw, 2.3rem);
+      line-height: 1.12;
+      letter-spacing: -0.025em;
+      text-wrap: balance;
     }
 
     .collection-subtitle,
@@ -153,20 +174,40 @@
     .field label,
     .footer-title {
       font-size: 1rem;
-      line-height: 1.5;
+      line-height: 1.45;
     }
 
     .about-stat-value {
-      font-size: 1.75rem;
-      line-height: 1.2;
+      @include fluid-type(1.55rem, 6vw, 1.9rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
     }
 
     .customer-quote p {
-      @include fluid-type(1.05rem, 4.4vw, 1.25rem);
+      @include fluid-type(1.05rem, 4.2vw, 1.2rem);
     }
 
     .testimonial-btn span {
       font-size: 1rem;
+    }
+
+    .field label,
+    .footer-contact label {
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
+    .field input,
+    .footer-contact input,
+    .footer-contact textarea {
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+
+    .footer-header h3,
+    .footer-title,
+    .customer-name {
+      text-wrap: balance;
     }
   }
 }

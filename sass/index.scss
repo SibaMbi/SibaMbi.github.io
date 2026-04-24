@@ -693,7 +693,7 @@ a { @include link-aqua-underline; }
   width: 100%;
   display: flex;
   justify-content: center;
-  height: 240px;
+  height: max-content;
 }
 
 .testimonial-list {
