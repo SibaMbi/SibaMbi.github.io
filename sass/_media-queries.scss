@@ -1,6 +1,18 @@
 @use "core" as *;
 @mixin mobile-query {
   @media (max-width: 767px) {
+    html {
+      font-size: 16px;
+    }
+
+    body {
+      line-height: 1.6;
+    }
+
+    .site-header {
+      font-size: 100%;
+    }
+
     .mobile-menu-panel {
       position: relative;
       width: 100%;
@@ -73,6 +85,88 @@
       .menu-icon .bar3 {
         transform: translateY(-10px) rotate(-45deg);
       }
+    }
+
+    p,
+    li,
+    label,
+    input,
+    textarea,
+    .top-nav-link,
+    .main-nav-link,
+    .service-link,
+    .customer-detail {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .btn,
+    .main-nav-cta,
+    .collection-button,
+    .submit-form {
+      font-size: 1rem;
+    }
+
+    .landing-heading h1 {
+      @include fluid-type(2.75rem, 10vw, 3.5rem);
+      line-height: 1.08;
+    }
+
+    .hero-subtitle {
+      font-size: 1.05rem;
+      line-height: 1.65;
+    }
+
+    .hero-feature-title,
+    .about-feature-title,
+    .service-title,
+    .security-icon-title {
+      @include fluid-type(1.2rem, 4.6vw, 1.45rem);
+      line-height: 1.25;
+    }
+
+    .hero-feature-text,
+    .about-feature-list,
+    .service-text,
+    .security-message p,
+    .services-message p,
+    .testimonial-header p,
+    .customer-quote p,
+    .footer-header p {
+      font-size: 1rem;
+      line-height: 1.65;
+    }
+
+    .security-message h2,
+    .collection-header h2,
+    .about-header h2,
+    .services-message h2,
+    .testimonial-header h2,
+    .cta-message h2,
+    .footer-header h3 {
+      @include fluid-type(2rem, 7vw, 2.5rem);
+      line-height: 1.15;
+    }
+
+    .collection-subtitle,
+    .about-stat-label,
+    .field label,
+    .footer-title {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .about-stat-value {
+      font-size: 1.75rem;
+      line-height: 1.2;
+    }
+
+    .customer-quote p {
+      @include fluid-type(1.05rem, 4.4vw, 1.25rem);
+    }
+
+    .testimonial-btn span {
+      font-size: 1rem;
     }
   }
 }
