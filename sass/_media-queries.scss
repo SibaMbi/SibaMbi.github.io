@@ -363,7 +363,7 @@
       .main-nav-list { width: auto; padding-top: 0; }
     }
     .landing-heading {
-      width: 100%;
+      @include force-center();
       text-align: center;
     }
 
