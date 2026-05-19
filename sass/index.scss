@@ -209,13 +209,13 @@ a { @include link-aqua-underline; }
 
 .landing-heading {
   @include force-center();
-  padding-left: 2rem;
+  margin-left: 2.5rem;
 }
 
 
 /* Keep selectors shallow */
 .landing-heading h1 {
-  padding-top: 6rem;
+  padding-top: 5rem;
   position: relative;
   color: $ink;
   @include fluid-type(4rem, 6vw, 5rem);
@@ -296,14 +296,12 @@ a { @include link-aqua-underline; }
 
 /* MESSAGE */
 .security-message {
-  padding: clamp(2rem, 4vw, 3rem);
-  padding-top: 0;
-  text-align: center;
+  @include force-center;
 
   h2 {
     margin: 0 0 0.75rem 0;
     padding: 0;
-    
+    @include fluid-type(2.4rem, 6vw, 6rem);
   }
 
   p {
@@ -316,7 +314,6 @@ a { @include link-aqua-underline; }
 /* MAP */
 .security-map {
   margin-top: 2.5rem;
-
 
   /* keep map aligned with text column on mobile */
   @include force-center;
