@@ -598,6 +598,7 @@ a:focus-visible {
   background-image: radial-gradient(ellipse at 85% 25%, #9fe7e5 0%, #dff7f5 40%, rgba(255, 255, 255, 0) 50%), linear-gradient(135deg, rgb(253, 252, 253) 0%, #f6fffd 55%, #e6fbf8 100%);
   padding-bottom: 4rem;
   align-items: center;
+  justify-items: center;
 }
 
 .landing-heading {
@@ -1509,6 +1510,9 @@ a:focus-visible {
     padding-top: 0;
   }
   .landing-heading {
+    width: min(100%, 40rem);
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
   }
   /* Hero type scaling (matches your intent) */
@@ -1628,6 +1632,8 @@ a:focus-visible {
     grid-column: 1/2;
     grid-row: 1/2;
     padding: 2rem 0 3rem clamp(2rem, 5vw, 4rem);
+    margin-left: 0;
+    margin-right: 0;
     text-align: left;
   }
   .landing-heading h1 {
