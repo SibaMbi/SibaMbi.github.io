@@ -119,6 +119,10 @@
       font-size: 1rem;
       line-height: 1.2;
     }
+    
+    .landing-heading {
+      margin-left: 1.5rem;
+    }
 
     .landing-heading h1 {
       @include fluid-type(2.35rem, 9vw, 3rem);
@@ -363,7 +367,6 @@
       .main-nav-list { width: auto; padding-top: 0; }
     }
     .landing-heading {
-      @include force-center();
       text-align: center;
     }
 
@@ -490,8 +493,6 @@
       grid-column: 1 / 2;
       grid-row: 1 / 2;
       padding: 2rem 0 3rem clamp(2rem, 5vw, 4rem);
-      margin-left: 0;
-      margin-right: 0;
       text-align: left;
     }
 

@@ -205,12 +205,10 @@ a { @include link-aqua-underline; }
 
   padding-bottom: 4rem;
   align-items: center;
-  justify-items: center;
 }
 
 .landing-heading {
   @include force-center();
-  margin-left: 1.5rem;
 }
 
 
@@ -722,7 +720,6 @@ a { @include link-aqua-underline; }
   position: relative;
   margin: 0;
   padding-left: 3rem;
-  min-height: 200px;
 
   &::before {
     content: "“";
