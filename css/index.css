@@ -1510,9 +1510,7 @@ a:focus-visible {
     padding-top: 0;
   }
   .landing-heading {
-    width: min(100%, 40rem);
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
     text-align: center;
   }
   /* Hero type scaling (matches your intent) */
