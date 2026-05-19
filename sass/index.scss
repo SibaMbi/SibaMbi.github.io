@@ -720,6 +720,7 @@ a { @include link-aqua-underline; }
   position: relative;
   margin: 0;
   padding-left: 3rem;
+  min-height: 200px;
 
   &::before {
     content: "“";

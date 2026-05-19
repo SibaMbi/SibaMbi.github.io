@@ -1151,6 +1151,7 @@ a:focus-visible {
   position: relative;
   margin: 0;
   padding-left: 3rem;
+  min-height: 200px;
 }
 .customer-quote::before {
   content: "“";
