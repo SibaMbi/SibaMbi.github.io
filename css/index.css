@@ -324,7 +324,7 @@ a:focus-visible {
   display: none;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 640px) {
   html {
     font-size: 16px;
   }
@@ -426,7 +426,6 @@ a:focus-visible {
     line-height: 1.2;
   }
   .landing-heading h1 {
-    font-size: clamp(2.35rem, 9vw, 3rem);
     line-height: 1.06;
     letter-spacing: -0.03em;
     text-wrap: balance;
@@ -606,11 +605,12 @@ a:focus-visible {
   margin-right: auto;
   text-align: left;
   padding-inline: clamp(1rem, 3vw, 2rem);
+  padding-left: 2rem;
 }
 
 /* Keep selectors shallow */
 .landing-heading h1 {
-  padding-top: 5rem;
+  padding-top: 6rem;
   position: relative;
   color: rgb(6, 6, 50);
   font-size: clamp(4rem, 6vw, 5rem);
@@ -704,16 +704,13 @@ a:focus-visible {
 
 /* MESSAGE */
 .security-message {
-  width: min(100%, 40rem);
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left;
-  padding-inline: clamp(1rem, 3vw, 2rem);
+  padding: clamp(2rem, 4vw, 3rem);
+  padding-top: 0;
+  text-align: center;
 }
 .security-message h2 {
   margin: 0 0 0.75rem 0;
   padding: 0;
-  font-size: clamp(2.4rem, 6vw, 6rem);
 }
 .security-message p {
   margin: 0;
@@ -1148,6 +1145,7 @@ a:focus-visible {
   position: relative;
   margin: 0;
   padding-left: 3rem;
+  min-height: 200px;
 }
 .customer-quote::before {
   content: "“";
@@ -1510,9 +1508,6 @@ a:focus-visible {
     text-align: center;
   }
   /* Hero type scaling (matches your intent) */
-  .landing-heading h1 {
-    font-size: clamp(5rem, 8vw, 6.5rem);
-  }
   .hero-subtitle {
     font-size: 1.7em;
   }
@@ -1628,11 +1623,8 @@ a:focus-visible {
     padding: 2rem 0 3rem clamp(2rem, 5vw, 4rem);
     text-align: left;
   }
-  .landing-heading h1 {
-    font-size: clamp(2.9rem, 5.2vw, 4.8rem);
-  }
   .hero-subtitle {
-    font-size: clamp(1.2rem, 2.2vw, 1.4rem);
+    font-size: clamp(1.5rem, 2.2vw, 1.7rem);
   }
   /* match your desktop CTA tweak */
   .btn-aqua-pill {
@@ -1748,13 +1740,14 @@ a:focus-visible {
 }
 /* ============ 1200px: page becomes two-column layout ============ */
 @media (min-width: 1200px) {
-  .landing-heading {
-    padding: 0 0 0 clamp(2rem, 5vw, 4rem);
-    text-align: left;
-  }
   .landing-heading h1 {
-    padding-top: 1rem;
-    font-size: clamp(3rem, 5.5vw, 5rem);
+    padding-top: clamp(3.5rem, 5vw, 3.6rem);
+  }
+  .landing-visual img {
+    width: 90%;
+  }
+  .hero-subtitle {
+    font-size: clamp(1.3rem, 2.5vw, 1.6rem);
   }
   .about-us-page {
     display: grid;

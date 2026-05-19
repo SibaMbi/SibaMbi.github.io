@@ -209,12 +209,13 @@ a { @include link-aqua-underline; }
 
 .landing-heading {
   @include force-center();
+  padding-left: 2rem;
 }
 
 
 /* Keep selectors shallow */
 .landing-heading h1 {
-  padding-top: 5rem;
+  padding-top: 6rem;
   position: relative;
   color: $ink;
   @include fluid-type(4rem, 6vw, 5rem);
@@ -295,12 +296,14 @@ a { @include link-aqua-underline; }
 
 /* MESSAGE */
 .security-message {
-  @include force-center;
+  padding: clamp(2rem, 4vw, 3rem);
+  padding-top: 0;
+  text-align: center;
 
   h2 {
     margin: 0 0 0.75rem 0;
     padding: 0;
-    @include fluid-type(2.4rem, 6vw, 6rem);
+    
   }
 
   p {
@@ -313,6 +316,7 @@ a { @include link-aqua-underline; }
 /* MAP */
 .security-map {
   margin-top: 2.5rem;
+
 
   /* keep map aligned with text column on mobile */
   @include force-center;
@@ -433,7 +437,7 @@ a { @include link-aqua-underline; }
   background-color: $bg;
   padding: 0.8rem 4rem;
   border: 0;
-  border-radius: $radius-sm;
+  border-radius: $radius-sm;  
   text-align: center;
 
   &:hover {
@@ -720,6 +724,7 @@ a { @include link-aqua-underline; }
   position: relative;
   margin: 0;
   padding-left: 3rem;
+  min-height: 200px;
 
   &::before {
     content: "“";
