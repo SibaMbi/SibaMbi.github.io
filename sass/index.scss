@@ -211,7 +211,7 @@ a { @include link-aqua-underline; }
 .landing-heading {
   @include force-center();
 }
-@include anim.landing-animations();
+@include anim.hero-animations();
 
 /* Keep selectors shallow */
 .landing-heading h1 {
