@@ -30,8 +30,8 @@
         100%{-webkit-transform:rotateX(0); transform:rotateX(0); -webkit-transform-origin:bottom; transform-origin:bottom; opacity:1;}
     }
     .hero-visual{
-        -webkit-animation:swing-in-bottom-fwd 3s ease-in both;
-        animation:swing-in-bottom-fwd 3s ease-in both;
+        -webkit-animation:swing-in-bottom-fwd 2.5s ease-in both;
+        animation:swing-in-bottom-fwd 2.5s ease-in both;
     }
 
     @-webkit-keyframes slideUpAnimation {
