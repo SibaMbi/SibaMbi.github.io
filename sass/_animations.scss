@@ -126,5 +126,51 @@
         -webkit-animation-delay: 0.5s;
         animation-delay: 0.5s;
     }
+}
 
+@mixin security-animations {
+
+    @-webkit-keyframes fadeInUpAnimation {
+        0% { -webkit-transform: translateY(40px); transform: translateY(40px); opacity: 0; }
+        100% { -webkit-transform: translateY(0); transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeInUpAnimation {
+        0% { -webkit-transform: translateY(40px); transform: translateY(40px); opacity: 0; }
+        100% { -webkit-transform: translateY(0); transform: translateY(0); opacity: 1; }
+    }
+
+    .security-map, .security-message {
+        opacity: 0;
+        will-change: transform, opacity;
+    }
+    .hero-feature-text {
+        opacity: 0;
+        -webkit-transform: translateX(-50px);
+        transform: translateX(-50px);
+        will-change: transform, opacity;
+    }
+
+    .security-message {
+        opacity: 0;
+        -webkit-transform: translateY(40px);
+        transform: translateY(40px);
+    }
+
+    .security-message.is-visible {
+        -webkit-animation: fadeInUpAnimation 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0s 1 normal both;
+        animation: fadeInUpAnimation 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0s 1 normal both;
+    }
+    @-webkit-keyframes scale-in-ver-center {
+        0% { -webkit-transform: scale(0.5); transform: scale(0.5); opacity: 0; }
+        100% { -webkit-transform: scale(1); transform: scale(1); opacity: 1; }
+    }
+    @keyframes scale-in-ver-center {
+        0% { -webkit-transform: scale(0.5); transform: scale(0.5); opacity: 0; }
+        100% { -webkit-transform: scale(1); transform: scale(1); opacity: 1; }
+    }
+    .security-map.is-visible {
+	    -webkit-animation: scale-in-ver-center 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	    animation: scale-in-ver-center 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
 }

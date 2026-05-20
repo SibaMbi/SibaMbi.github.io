@@ -9,6 +9,7 @@ document.querySelectorAll(".hero-features-list, .about-benefits, .services-grid"
 
 const revealTargets = document.querySelectorAll(
   [
+    ".hero-visual",
     ".hero-feature-card",
     ".security-message",
     ".security-map",

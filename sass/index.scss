@@ -291,7 +291,8 @@ a { @include link-aqua-underline; }
     rgba(234, 251, 253, 0.8) 100%
   );
 }
-  
+
+@include anim.security-animations();
 
 
 /* MESSAGE */
