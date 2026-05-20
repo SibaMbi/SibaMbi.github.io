@@ -1,5 +1,6 @@
 @use "core" as *;
 @use "media-queries" as media;
+@use "animations" as anim;
 /* =========================
    A11Y UTILITIES
 ========================= */
@@ -210,7 +211,7 @@ a { @include link-aqua-underline; }
 .landing-heading {
   @include force-center();
 }
-
+@include anim.landing-animations();
 
 /* Keep selectors shallow */
 .landing-heading h1 {
@@ -968,3 +969,4 @@ a { @include link-aqua-underline; }
   }
 }
 @include media.desktop-queries();
+
