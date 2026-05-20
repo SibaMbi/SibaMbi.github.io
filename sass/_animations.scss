@@ -176,12 +176,12 @@
 
     @-webkit-keyframes securityIconsLoop {
         0% { -webkit-transform: translateX(0); transform: translateX(0); }
-        100% { -webkit-transform: translateX(calc(-50% - (var(--security-icons-gap) / 2))); transform: translateX(calc(-50% - (var(--security-icons-gap) / 2))); }
+        100% { -webkit-transform: translateX(calc(-50% - var(--security-icons-gap-half))); transform: translateX(calc(-50% - var(--security-icons-gap-half))); }
     }
 
     @keyframes securityIconsLoop {
         0% { -webkit-transform: translateX(0); transform: translateX(0); }
-        100% { -webkit-transform: translateX(calc(-50% - (var(--security-icons-gap) / 2))); transform: translateX(calc(-50% - (var(--security-icons-gap) / 2))); }
+        100% { -webkit-transform: translateX(calc(-50% - var(--security-icons-gap-half))); transform: translateX(calc(-50% - var(--security-icons-gap-half))); }
     }
 
     @media (prefers-reduced-motion: reduce) {

@@ -610,6 +610,7 @@
 
     .security-icons-track {
       --security-icons-gap: 1rem;
+      --security-icons-gap-half: 0.5rem;
       display: flex;
       align-items: stretch;
       gap: var(--security-icons-gap);
@@ -628,6 +629,11 @@
       display: flex;
       justify-content: center;
       gap: var(--security-icons-gap);
+    }
+
+    .security-icons-list[aria-hidden="true"] {
+      display: flex;
+      pointer-events: none;
     }
 
     .security-icon-card {
