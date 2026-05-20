@@ -390,6 +390,8 @@ a { @include link-aqua-underline; }
   );
 }
 
+@include anim.collection-form-animations();
+
 .collection-form-inner {
   display: grid;
   justify-items: center;

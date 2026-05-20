@@ -209,8 +209,8 @@
       display: flex;
       grid-template-columns: none;
       gap: 0;
-      -webkit-animation: securityIconsMobileSlides 12s infinite;
-      animation: securityIconsMobileSlides 12s infinite;
+      -webkit-animation: securityIconsMobileSlides 6s infinite;
+      animation: securityIconsMobileSlides 6s infinite;
     }
 
     .security-icons-track > .security-icons-list:first-child .security-icon-card {
