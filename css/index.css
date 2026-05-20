@@ -683,8 +683,8 @@ a:focus-visible {
   }
 }
 .hero-visual {
-  -webkit-animation: swing-in-bottom-fwd 2.4s ease-in both;
-  animation: swing-in-bottom-fwd 2.4s ease-in both;
+  -webkit-animation: swing-in-bottom-fwd 2.5s ease-in both;
+  animation: swing-in-bottom-fwd 2.5s ease-in both;
 }
 
 @-webkit-keyframes slideUpAnimation {
