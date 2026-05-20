@@ -487,6 +487,32 @@ a:focus-visible {
   .customer-quote p {
     font-size: clamp(1.05rem, 4.2vw, 1.2rem);
   }
+  .security-icons {
+    width: 100%;
+    max-width: 600px;
+    margin-inline: auto;
+    overflow: hidden;
+    position: relative;
+  }
+  .security-icons-track {
+    display: block;
+    width: 100%;
+  }
+  .security-icons-track > .security-icons-list:first-child {
+    width: 500%;
+    display: flex;
+    grid-template-columns: none;
+    gap: 0;
+    -webkit-animation: securityIconsMobileSlides 12s infinite;
+    animation: securityIconsMobileSlides 12s infinite;
+  }
+  .security-icons-track > .security-icons-list:first-child .security-icon-card {
+    flex: 0 0 20%;
+    width: 20%;
+  }
+  .security-icon-card--mobile-duplicate {
+    display: block;
+  }
   .testimonial-btn span {
     font-size: 1rem;
   }
@@ -981,8 +1007,90 @@ a:focus-visible {
     transform: translateX(calc(-50% - var(--security-icons-gap-half)));
   }
 }
+@-webkit-keyframes securityIconsMobileSlides {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  20% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  25% {
+    -webkit-transform: translateX(-20%);
+    transform: translateX(-20%);
+  }
+  45% {
+    -webkit-transform: translateX(-20%);
+    transform: translateX(-20%);
+  }
+  50% {
+    -webkit-transform: translateX(-40%);
+    transform: translateX(-40%);
+  }
+  70% {
+    -webkit-transform: translateX(-40%);
+    transform: translateX(-40%);
+  }
+  75% {
+    -webkit-transform: translateX(-60%);
+    transform: translateX(-60%);
+  }
+  95% {
+    -webkit-transform: translateX(-60%);
+    transform: translateX(-60%);
+  }
+  100% {
+    -webkit-transform: translateX(-80%);
+    transform: translateX(-80%);
+  }
+}
+@keyframes securityIconsMobileSlides {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  20% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  25% {
+    -webkit-transform: translateX(-20%);
+    transform: translateX(-20%);
+  }
+  45% {
+    -webkit-transform: translateX(-20%);
+    transform: translateX(-20%);
+  }
+  50% {
+    -webkit-transform: translateX(-40%);
+    transform: translateX(-40%);
+  }
+  70% {
+    -webkit-transform: translateX(-40%);
+    transform: translateX(-40%);
+  }
+  75% {
+    -webkit-transform: translateX(-60%);
+    transform: translateX(-60%);
+  }
+  95% {
+    -webkit-transform: translateX(-60%);
+    transform: translateX(-60%);
+  }
+  100% {
+    -webkit-transform: translateX(-80%);
+    transform: translateX(-80%);
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   .security-icons-track {
+    -webkit-animation: none !important;
+    animation: none !important;
+    -webkit-transform: translateX(0) !important;
+    transform: translateX(0) !important;
+  }
+  .security-icons-track > .security-icons-list:first-child {
     -webkit-animation: none !important;
     animation: none !important;
     -webkit-transform: translateX(0) !important;
@@ -1049,6 +1157,10 @@ a:focus-visible {
 }
 
 .security-icons-list[aria-hidden=true] {
+  display: none;
+}
+
+.security-icon-card--mobile-duplicate {
   display: none;
 }
 
@@ -1834,17 +1946,43 @@ a:focus-visible {
   .security-message p {
     font-size: clamp(1.3rem, 2.5vw, 1.6rem);
   }
-  .security-icons-list {
-    gap: 30px;
-    width: min(100%, 40rem);
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-    padding-inline: clamp(1rem, 3vw, 2rem);
+  .security-icons {
     width: 100%;
+    overflow: hidden;
+  }
+  .security-icons-track {
+    --security-icons-gap: 1rem;
+    --security-icons-gap-half: 0.5rem;
+    display: flex;
+    align-items: stretch;
+    gap: var(--security-icons-gap);
+    width: calc(200% + var(--security-icons-gap));
+    will-change: transform;
+    -webkit-animation: securityIconsLoop 18s linear infinite;
+    animation: securityIconsLoop 18s linear infinite;
+  }
+  .security-icons-list {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    padding-inline: 0;
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+    gap: var(--security-icons-gap);
+  }
+  .security-icons-list[aria-hidden=true] {
+    display: flex;
+    pointer-events: none;
   }
   .security-icon-card {
+    flex: 0 0 23%;
+    width: 23%;
     padding: 1.5rem 0.75rem 2.5rem;
+  }
+  .security-icons:hover .security-icons-track {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
   }
   .security-icon-image {
     height: 120px;
@@ -2036,6 +2174,7 @@ a:focus-visible {
     pointer-events: none;
   }
   .security-icon-card {
+    /* keep visual consistent; allow cards to size evenly */
     flex: 0 0 23%;
     width: 23%;
     padding: 0.75rem 0.75rem 1rem;

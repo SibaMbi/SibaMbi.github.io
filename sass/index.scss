@@ -352,6 +352,10 @@ a { @include link-aqua-underline; }
   display: none;
 }
 
+.security-icon-card--mobile-duplicate {
+  display: none;
+}
+
 .security-icon-card {
   text-align: center;
   background: #fff;

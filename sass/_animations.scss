@@ -184,8 +184,39 @@
         100% { -webkit-transform: translateX(calc(-50% - var(--security-icons-gap-half))); transform: translateX(calc(-50% - var(--security-icons-gap-half))); }
     }
 
+    @-webkit-keyframes securityIconsMobileSlides {
+        0% { -webkit-transform: translateX(0); transform: translateX(0); }
+        20% { -webkit-transform: translateX(0); transform: translateX(0); }
+        25% { -webkit-transform: translateX(-20%); transform: translateX(-20%); }
+        45% { -webkit-transform: translateX(-20%); transform: translateX(-20%); }
+        50% { -webkit-transform: translateX(-40%); transform: translateX(-40%); }
+        70% { -webkit-transform: translateX(-40%); transform: translateX(-40%); }
+        75% { -webkit-transform: translateX(-60%); transform: translateX(-60%); }
+        95% { -webkit-transform: translateX(-60%); transform: translateX(-60%); }
+        100% { -webkit-transform: translateX(-80%); transform: translateX(-80%); }
+    }
+
+    @keyframes securityIconsMobileSlides {
+        0% { -webkit-transform: translateX(0); transform: translateX(0); }
+        20% { -webkit-transform: translateX(0); transform: translateX(0); }
+        25% { -webkit-transform: translateX(-20%); transform: translateX(-20%); }
+        45% { -webkit-transform: translateX(-20%); transform: translateX(-20%); }
+        50% { -webkit-transform: translateX(-40%); transform: translateX(-40%); }
+        70% { -webkit-transform: translateX(-40%); transform: translateX(-40%); }
+        75% { -webkit-transform: translateX(-60%); transform: translateX(-60%); }
+        95% { -webkit-transform: translateX(-60%); transform: translateX(-60%); }
+        100% { -webkit-transform: translateX(-80%); transform: translateX(-80%); }
+    }
+
     @media (prefers-reduced-motion: reduce) {
         .security-icons-track {
+            -webkit-animation: none !important;
+            animation: none !important;
+            -webkit-transform: translateX(0) !important;
+            transform: translateX(0) !important;
+        }
+
+        .security-icons-track > .security-icons-list:first-child {
             -webkit-animation: none !important;
             animation: none !important;
             -webkit-transform: translateX(0) !important;
