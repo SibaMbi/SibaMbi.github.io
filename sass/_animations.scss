@@ -173,4 +173,23 @@
 	    -webkit-animation: scale-in-ver-center 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	    animation: scale-in-ver-center 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     }
+
+    @-webkit-keyframes securityIconsLoop {
+        0% { -webkit-transform: translateX(0); transform: translateX(0); }
+        100% { -webkit-transform: translateX(calc(-50% - (var(--security-icons-gap) / 2))); transform: translateX(calc(-50% - (var(--security-icons-gap) / 2))); }
+    }
+
+    @keyframes securityIconsLoop {
+        0% { -webkit-transform: translateX(0); transform: translateX(0); }
+        100% { -webkit-transform: translateX(calc(-50% - (var(--security-icons-gap) / 2))); transform: translateX(calc(-50% - (var(--security-icons-gap) / 2))); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .security-icons-track {
+            -webkit-animation: none !important;
+            animation: none !important;
+            -webkit-transform: translateX(0) !important;
+            transform: translateX(0) !important;
+        }
+    }
 }

@@ -348,6 +348,10 @@ a { @include link-aqua-underline; }
   gap: 15px;
 }
 
+.security-icons-list[aria-hidden="true"] {
+  display: none;
+}
+
 .security-icon-card {
   text-align: center;
   background: #fff;

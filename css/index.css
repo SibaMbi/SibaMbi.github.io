@@ -961,6 +961,34 @@ a:focus-visible {
   animation: scale-in-ver-center 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
+@-webkit-keyframes securityIconsLoop {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-50% - var(--security-icons-gap) / 2));
+    transform: translateX(calc(-50% - var(--security-icons-gap) / 2));
+  }
+}
+@keyframes securityIconsLoop {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-50% - var(--security-icons-gap) / 2));
+    transform: translateX(calc(-50% - var(--security-icons-gap) / 2));
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .security-icons-track {
+    -webkit-animation: none !important;
+    animation: none !important;
+    -webkit-transform: translateX(0) !important;
+    transform: translateX(0) !important;
+  }
+}
 /* MESSAGE */
 .security-message {
   width: min(100%, 40rem);
@@ -1018,6 +1046,10 @@ a:focus-visible {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 15px;
+}
+
+.security-icons-list[aria-hidden=true] {
+  display: none;
 }
 
 .security-icon-card {
@@ -1976,22 +2008,36 @@ a:focus-visible {
     grid-row: 2/3;
     margin-top: 0.5rem;
     width: 100%;
+    overflow: hidden;
+  }
+  .security-icons-track {
+    --security-icons-gap: 1rem;
+    display: flex;
+    align-items: stretch;
+    gap: var(--security-icons-gap);
+    width: calc(200% + var(--security-icons-gap));
+    will-change: transform;
+    -webkit-animation: securityIconsLoop 18s linear infinite;
+    animation: securityIconsLoop 18s linear infinite;
   }
   .security-icons-list {
-    /* switch from grid to row layout like your original */
     width: 100%;
     margin: 0;
     padding: 0;
     padding-inline: 0;
+    flex: 0 0 100%;
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: var(--security-icons-gap);
   }
   .security-icon-card {
-    /* keep visual consistent; allow cards to size evenly */
-    flex: 1 1 0;
-    width: 100%; /* prevents huge cards on wide screens */
+    flex: 0 0 23%;
+    width: 23%;
     padding: 0.75rem 0.75rem 1rem;
+  }
+  .security-icons:hover .security-icons-track {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
   }
   .security-icon-image {
     height: 90px;
