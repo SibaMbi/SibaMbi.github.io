@@ -69,6 +69,54 @@ export function initTestimonialSlider(root) {
   if (!list || items.length === 0) return;
 
   const mod = (n, m) => ((n % m) + m) % m;
+  let activeTypingFrame = null;
+
+  function stopTypingAnimation() {
+    if (activeTypingFrame !== null) {
+      cancelAnimationFrame(activeTypingFrame);
+      activeTypingFrame = null;
+    }
+  }
+
+  function typeActiveQuote(liElement) {
+    const quoteParagraph = liElement?.querySelector(".customer-quote p");
+    if (!quoteParagraph) return;
+
+    const finalText = quoteParagraph.dataset.fullText ?? quoteParagraph.textContent.trim().replace(/\s+/g, " ");
+    quoteParagraph.dataset.fullText = finalText;
+
+    stopTypingAnimation();
+
+    const totalCharacters = finalText.length;
+    const duration = Math.max(520, totalCharacters * 8);
+    const startTime = performance.now();
+
+    quoteParagraph.style.opacity = "1";
+    quoteParagraph.textContent = "";
+
+    const tick = (now) => {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const visibleCharacters = Math.floor(totalCharacters * progress);
+
+      quoteParagraph.textContent = finalText.slice(0, visibleCharacters);
+
+      if (progress < 1) {
+        activeTypingFrame = requestAnimationFrame(tick);
+        return;
+      }
+
+      quoteParagraph.textContent = finalText;
+      activeTypingFrame = null;
+    };
+
+    activeTypingFrame = requestAnimationFrame(tick);
+  }
+
+  function maybeTypeActiveQuote(liElement) {
+    if (root.dataset.testimonialTypingEnabled !== "true") return;
+    typeActiveQuote(liElement);
+  }
 
   function setActiveAria(liElement) {
     liElement.setAttribute("aria-current", "true");
@@ -89,10 +137,17 @@ export function initTestimonialSlider(root) {
 
     items.forEach((li, i) => {
       const isActive = i === activeIndex ? true : false;
+      const quoteParagraph = li.querySelector(".customer-quote p");
 
       li.classList.toggle("is-active", isActive);
       isActive ? setActiveAria(li) : setNonActiveAria(li);
+
+      if (quoteParagraph && !isActive) {
+        quoteParagraph.style.opacity = "0";
+      }
     });
+
+    maybeTypeActiveQuote(items[activeIndex]);
 
     const disable = items.length <= 1 ? true : false;
 
@@ -143,6 +198,15 @@ export function initTestimonialSlider(root) {
   let idx = getCurrentIndex();
   idx = idx < 0 ? 0 : idx;
   applyState(idx);
+
+  root.__startActiveTestimonialTyping = () => {
+    root.dataset.testimonialTypingEnabled = "true";
+
+    let currentIndex = getCurrentIndex();
+    currentIndex = currentIndex < 0 ? 0 : currentIndex;
+
+    maybeTypeActiveQuote(items[currentIndex]);
+  };
 }
 
 export function enableDragScrollX(container) {

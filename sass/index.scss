@@ -668,6 +668,7 @@ a { @include link-aqua-underline; }
   @include link-aqua-underline;
 }
 
+@include anim.testimonial-animations();
 .testimonial-page {
   background: linear-gradient(
     0deg,
@@ -812,6 +813,7 @@ a { @include link-aqua-underline; }
   }
 }
 
+@include anim.cta-animations();
 .cta-page {
   background: linear-gradient(
     270deg,

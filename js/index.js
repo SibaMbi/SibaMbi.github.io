@@ -131,6 +131,10 @@ const revealObserver = new IntersectionObserver(
         animateAboutStatValue(entry.target.querySelector(".about-stat-value"));
       }
 
+      if (entry.target.classList.contains("testimonial-right")) {
+        document.querySelector(".testimonial-page")?.__startActiveTestimonialTyping?.();
+      }
+
       observer.unobserve(entry.target);
     });
   },
