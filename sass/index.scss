@@ -488,7 +488,7 @@ a { @include link-aqua-underline; }
       #e6fbf8 100%
     );
 }
-
+@include anim.about-us-animations();
 /* Left side */
 .about-sales {
   width: 100%;
