@@ -497,8 +497,8 @@ a { @include link-aqua-underline; }
 
 .about-header h2 {
   color: $ink;
-  font-size: 2.4rem;
-  margin: 0 0 1rem;
+  font-size: clamp(2.8rem, 5vw, 4rem);
+  margin: 0 0 clamp(1.5rem, 3vw, 2.5rem);
 }
 
 /* stats (dl) */
@@ -535,7 +535,7 @@ a { @include link-aqua-underline; }
 .about-feature {
   @include scroll-feature;
   height: clamp(320px, 15vw, 350px);
-  padding: 0.8rem 1rem 1rem;
+  padding: 25px;
 
   /* You already have .card class; only keep this if you want different transparency than global .card */
   @include card-soft(rgba(255, 255, 255, 0.75), 1.1rem);

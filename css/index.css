@@ -1275,8 +1275,8 @@ a:focus-visible {
 
 .about-header h2 {
   color: rgb(6, 6, 50);
-  font-size: 2.4rem;
-  margin: 0 0 1rem;
+  font-size: clamp(2.8rem, 5vw, 4rem);
+  margin: 0 0 clamp(1.5rem, 3vw, 2.5rem);
 }
 
 /* stats (dl) */
@@ -1338,7 +1338,7 @@ a:focus-visible {
   margin: 1rem;
   width: 85%;
   height: clamp(320px, 15vw, 350px);
-  padding: 0.8rem 1rem 1rem;
+  padding: 25px;
   /* You already have .card class; only keep this if you want different transparency than global .card */
   background-color: rgba(255, 255, 255, 0.75);
   border-radius: 1.1rem;
@@ -2144,6 +2144,14 @@ a:focus-visible {
    (your grid layout change preserved)
 ========================= */
 @media (min-width: 992px) {
+  .about-title-break {
+    display: none;
+  }
+  .about-stats {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(1rem, 2vw, 1.5rem);
+    margin-bottom: clamp(1rem, 2vw, 2rem);
+  }
   .hero {
     display: grid;
     grid-template-columns: fit-content 1fr;
@@ -2312,17 +2320,28 @@ a:focus-visible {
   }
   .about-us-page {
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: clamp(1.5rem, 4vw, 3rem);
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(3rem, 5vw, 5rem);
     align-items: center;
     justify-items: center;
   }
+  .about-sales {
+    width: min(100%, 1120px);
+  }
   .about-benefits {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(1.5rem, 3vw, 2.5rem);
+    width: min(100%, 900px);
     padding-inline: 0;
+    overflow: visible;
+    cursor: default;
   }
   .about-feature {
     height: auto;
-    padding: 0.8rem 1rem 1rem;
+    width: auto;
+    margin: 0;
+    padding: 25px;
   }
   .testimonial-page {
     padding: 5rem 2rem 7rem;
