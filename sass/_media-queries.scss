@@ -1,6 +1,6 @@
 @use "core" as *;
 @mixin mobile-query {
-  @media (max-width: 767px) {
+  @media (max-width: 576px) {
     html {
       font-size: 16px;
     }
@@ -140,6 +140,7 @@
 
     .hero-feature-title,
     .about-feature-title,
+    .collection-title,
     .service-title,
     .security-icon-title {
       @include fluid-type(1.15rem, 4.8vw, 1.35rem);
@@ -313,8 +314,202 @@
 }
 @mixin desktop-queries {
   /* =========================
+     MEDIA QUERY: 576px
+     (content/tablet layout)
+  ========================= */
+  @media (min-width: 576px) {
+    .landing-heading {
+      text-align: center;
+    }
+
+    /* Hero type scaling (matches your intent) */
+    .landing-heading h1 {
+      @include fluid-type(5rem, 8vw, 6.5rem);
+    }
+
+    .hero-subtitle {
+      font-size: 1.7em;
+    }
+
+    /* your CTA scaling at tablet */
+    .btn-aqua-pill {
+      font-size: 1.2em;
+      padding: 13px 26px;
+    }
+    .landing-visual img {
+      height: 450px;
+    }
+    .hero-feature-image {
+      height: 300px; // stable without negative margins
+    }
+    .hero-feature-title {
+      @include fluid-type(2.5rem, 3.8vw, 3rem);
+    }
+    .hero-feature-text {
+      @include fluid-type(1.7rem, 2.9vw, 2rem);
+    }
+    
+    .security-message {
+      text-align: center;
+      h2 { @include fluid-type(3rem, 5.5vw, 3.5rem); }
+      p  { @include fluid-type(1.3rem, 2.5vw, 1.6rem); }
+    }
+
+    .security-icons {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .security-icons-track {
+      --security-icons-gap: 1rem;
+      --security-icons-gap-half: 0.5rem;
+      display: flex;
+      align-items: stretch;
+      gap: var(--security-icons-gap);
+      width: calc(200% + var(--security-icons-gap));
+      will-change: transform;
+      -webkit-animation: securityIconsLoop 18s linear infinite;
+      animation: securityIconsLoop 18s linear infinite;
+    }
+
+    .security-icons-list {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      padding-inline: 0;
+      flex: 0 0 100%;
+      display: flex;
+      justify-content: center;
+      gap: var(--security-icons-gap);
+    }
+
+    .security-icons-list[aria-hidden="true"] {
+      display: flex;
+      pointer-events: none;
+    }
+
+    .security-icon-card {
+      flex: 0 0 23%;
+      width: 23%;
+      padding: 1.5rem 0.75rem 2.5rem;
+    }
+
+    .security-icons:hover .security-icons-track {
+      -webkit-animation-play-state: paused;
+      animation-play-state: paused;
+    }
+
+    .security-icon-image {
+      height: 120px;
+    }
+
+    .security-icon-title {
+      @include fluid-type(1.4rem, 2.6vw, 1.8rem);
+    }
+
+    .security-map iframe {
+      height: 300px;
+    }
+    .about-feature-list {
+      font-size: 1rem;
+    }
+
+  .services-message{
+    margin-bottom: 75px;
+    p {font-size: 1.3rem;}
+  }
+  .footer-content {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 2rem 2.5rem;
+    padding: clamp(4rem, 6vw, 5rem);
+    justify-items: center;
+  }
+  .footer-links {
+    flex-direction: column;
+  }
+}
+
+  @media (max-width: 767px) {
+    .mobile-menu-panel {
+      position: relative;
+      width: 100%;
+      height: 99vh;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      background-color: $bg;
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      transform: translateY(-10px);
+      padding: 0;
+      pointer-events: none;
+      transition: max-height 0.30s ease, opacity 0.25s ease, transform 0.35s ease, padding 0.35s ease;
+    }
+
+    /* JS will toggle: .site-header.is-menu-open */
+    .site-header.is-menu-open {
+      .mobile-menu-panel {
+        max-height: 100vh;
+        opacity: 1;
+        transform: translateY(0);
+        padding: 0.5rem 0.5rem 0.75rem;
+        pointer-events: auto;
+
+      }
+
+      .mobile-menu-panel .top-nav,
+      .mobile-menu-panel .main-nav {
+        background-color: transparent;
+        box-shadow: none;
+        padding: 0;
+      }
+
+      .mobile-menu-panel .top-nav-list,
+      .mobile-menu-panel .main-nav-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      .mobile-menu-panel .top-nav-link,
+      .mobile-menu-panel .main-nav-link {
+        color: $ink;
+        text-decoration: none;
+        padding: 0.9rem 0.7rem;
+      }
+
+      .mobile-menu-panel .main-nav-cta {
+        color: #fff;
+      }
+
+      .menu-icon .bar {
+        background-color: #e11b22;
+        transform-origin: center;
+      }
+
+      .menu-icon .bar1 {
+        transform: translateY(10px) rotate(45deg);
+      }
+
+      .menu-icon .bar2 {
+        opacity: 0;
+      }
+
+      .menu-icon .bar3 {
+        transform: translateY(-10px) rotate(-45deg);
+      }
+    }
+  }
+
+  /* =========================
      MEDIA QUERY: 768px
-     (explicit, like you asked)
+     (full header layout)
   ========================= */
   @media (min-width: 768px) {
     .menu-icon { display: none; }
@@ -397,149 +592,39 @@
       .main-nav { flex-wrap: nowrap; }
       .main-nav-list { width: auto; padding-top: 0; }
     }
-    .landing-heading {
-      text-align: center;
-    }
 
-    /* Hero type scaling (matches your intent) */
-    .landing-heading h1 {
-      @include fluid-type(5rem, 8vw, 6.5rem);
-    }
-
-    .hero-subtitle {
-      font-size: 1.7em;
-    }
-
-    /* your CTA scaling at tablet */
-    .btn-aqua-pill {
-      font-size: 1.2em;
-      padding: 13px 26px;
-    }
-    .landing-visual img {
-      height: 450px;
-    }
-    .hero-feature-image {
-      height: 300px; // stable without negative margins
-    }
-    .hero-feature-title {
-      @include fluid-type(2.5rem, 3.8vw, 3rem);
-    }
-    .hero-feature-text {
-      @include fluid-type(1.7rem, 2.9vw, 2rem);
-    }
-    .security-message {
-      text-align: center;
-      h2 { @include fluid-type(3rem, 5.5vw, 3.5rem); }
-      p  { @include fluid-type(1.3rem, 2.5vw, 1.6rem); }
-    }
-
-    .security-icons {
-      width: 100%;
-      overflow: hidden;
-    }
-
-    .security-icons-track {
-      --security-icons-gap: 1rem;
-      --security-icons-gap-half: 0.5rem;
-      display: flex;
-      align-items: stretch;
-      gap: var(--security-icons-gap);
-      width: calc(200% + var(--security-icons-gap));
-      will-change: transform;
-      -webkit-animation: securityIconsLoop 18s linear infinite;
-      animation: securityIconsLoop 18s linear infinite;
-    }
-
-    .security-icons-list {
-      width: 100%;
-      margin: 0;
-      padding: 0;
-      padding-inline: 0;
-      flex: 0 0 100%;
-      display: flex;
-      justify-content: center;
-      gap: var(--security-icons-gap);
-    }
-
-    .security-icons-list[aria-hidden="true"] {
-      display: flex;
-      pointer-events: none;
-    }
-
-    .security-icon-card {
-      flex: 0 0 23%;
-      width: 23%;
-      padding: 1.5rem 0.75rem 2.5rem;
-    }
-
-    .security-icons:hover .security-icons-track {
-      -webkit-animation-play-state: paused;
-      animation-play-state: paused;
-    }
-
-    .security-icon-image {
-      height: 120px;
-    }
-
-    .security-icon-title {
-      @include fluid-type(1.4rem, 2.6vw, 1.8rem);
-    }
-
-    .security-map iframe {
-      height: 380px;
-    }
-
-    .about-benefits {
+    .about-benefits,
+    .services-grid {
       width: 100%;
       padding-inline: clamp(2rem, 5vw, 3rem);
+      overflow: visible;
+      cursor: default;
 
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 28px 22px;
+    }
 
-      overflow: visible;
-      cursor: default;
+    .services-grid {
+      max-width: 1200px;
     }
 
     .about-feature {
       width: 95%;
       margin: 0; /* grid gap handles spacing */
     }
-    .about-feature-list {
-      font-size: 1rem;
+
+    .service-card {
+      cursor: default;
+      width: auto;
+      margin: 0;
     }
-
-  .services-message{
-    margin-bottom: 75px;
-    p {font-size: 1.3rem;}
-  }
-  .services-grid {
-    width: auto;
-    max-width: 1200px;
-    overflow: visible;
-    cursor: default;
-
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 30px 30px;
   }
 
-  .service-card {
-    cursor: default;
-    width: auto;
-    margin: 0;
-  }
-  .footer-content {
-    display: grid;
-    grid-template-columns: 1.3fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 2rem 2.5rem;
-    padding: clamp(4rem, 6vw, 5rem);
-    justify-items: center;
-  }
-  .footer-links {
-    flex-direction: column;
-  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .hero-feature-card {
+      max-width: 500px;
+    }
   }
 
   /* =========================

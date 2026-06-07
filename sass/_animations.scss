@@ -135,7 +135,7 @@ $easing-standard: cubic-bezier(0.215, 0.610, 0.355, 1)  !default;
     .primary-cta   { animation-delay: 1.2s; }
 
     .hero-visual {
-        @include animate(swingInBottom, 2.3s, ease-in);
+        @include animate(swingInBottom, 1.6s, ease-in);
     }
 
     // Feature cards

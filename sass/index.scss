@@ -297,7 +297,10 @@ a { @include link-aqua-underline; }
 
 /* MESSAGE */
 .security-message {
-  @include force-center;
+  text-align: center;
+  margin-left: 1rem;
+  max-width: 115ch;
+  width: min(95%, 115ch); /* same intent, simpler */
 
   h2 {
     margin: 0 0 0.75rem 0;
@@ -608,7 +611,6 @@ a { @include link-aqua-underline; }
 /* Mobile: scroll row */
 .services-grid {
   @include make-scrollable;
-  gap: 30px;
   align-items: stretch;
 
   /* IMPORTANT: allow wrapping inside cards on Firefox */
