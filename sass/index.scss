@@ -297,7 +297,7 @@ a { @include link-aqua-underline; }
 
 /* MESSAGE */
 .security-message {
-  text-align: center;
+  text-align: left;
   margin-left: 1rem;
   max-width: 115ch;
   width: min(95%, 115ch); /* same intent, simpler */

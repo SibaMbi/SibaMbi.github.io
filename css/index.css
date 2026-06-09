@@ -106,38 +106,6 @@
     opacity: 1;
   }
 }
-@keyframes bounceTop {
-  0% {
-    transform: translateY(-45px);
-    animation-timing-function: ease-in;
-    opacity: 1;
-  }
-  25%, 55%, 75%, 87% {
-    transform: translateY(0);
-    animation-timing-function: ease-out;
-  }
-  40% {
-    transform: translateY(-24px);
-    animation-timing-function: ease-in;
-  }
-  65% {
-    transform: translateY(-12px);
-    animation-timing-function: ease-in;
-  }
-  82% {
-    transform: translateY(-6px);
-    animation-timing-function: ease-in;
-  }
-  93% {
-    transform: translateY(-4px);
-    animation-timing-function: ease-in;
-  }
-  100% {
-    transform: translateY(0);
-    animation-timing-function: ease-out;
-    opacity: 1;
-  }
-}
 @keyframes securityIconsLoop {
   from {
     transform: translateX(0);
@@ -834,7 +802,7 @@ a:focus-visible {
 }
 
 .hero-visual {
-  animation: swingInBottom 1.6s ease-in 0s 1 normal both;
+  animation: swingInBottom 1.8s ease-in 0s 1 normal both;
 }
 
 .hero-feature-card {
@@ -1040,7 +1008,7 @@ a:focus-visible {
 }
 /* MESSAGE */
 .security-message {
-  text-align: center;
+  text-align: left;
   margin-left: 1rem;
   max-width: 115ch;
   width: min(95%, 115ch); /* same intent, simpler */
@@ -1710,7 +1678,7 @@ a:focus-visible {
 }
 
 .cta-inner.is-visible .cta-action-button {
-  animation: bounceTop 1.25s linear 0.28s 1 normal both;
+  animation: bounceBottom 1.25s linear 0.28s 1 normal both;
 }
 .cta-inner.is-visible .cta-action-button:nth-child(2) {
   animation-delay: 0.48s;

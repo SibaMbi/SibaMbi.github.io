@@ -55,16 +55,6 @@
     100%                { transform: translateY(0);     animation-timing-function: ease-out; opacity: 1; }
 }
 
-@keyframes bounceTop {
-    0%                  { transform: translateY(-45px); animation-timing-function: ease-in; opacity: 1; }
-    25%, 55%, 75%, 87%  { transform: translateY(0);     animation-timing-function: ease-out; }
-    40%                 { transform: translateY(-24px);  animation-timing-function: ease-in; }
-    65%                 { transform: translateY(-12px);  animation-timing-function: ease-in; }
-    82%                 { transform: translateY(-6px);   animation-timing-function: ease-in; }
-    93%                 { transform: translateY(-4px);   animation-timing-function: ease-in; }
-    100%                { transform: translateY(0);      animation-timing-function: ease-out; opacity: 1; }
-}
-
 @keyframes securityIconsLoop {
     from { transform: translateX(0); }
     to   { transform: translateX(calc(-50% - var(--security-icons-gap-half))); }
@@ -130,7 +120,7 @@ $easing-standard: cubic-bezier(0.215, 0.610, 0.355, 1)  !default;
     .primary-cta   { animation-delay: 1.2s; }
 
     .hero-visual {
-        @include animate(swingInBottom, 1.6s, ease-in);
+        @include animate(swingInBottom, 1.8s, ease-in);
     }
 
     // Feature cards
@@ -319,7 +309,7 @@ $easing-standard: cubic-bezier(0.215, 0.610, 0.355, 1)  !default;
     }
 
     .cta-inner.is-visible .cta-action-button {
-        @include animate(bounceTop, 1.25s, linear, 0.28s);
+        @include animate(bounceBottom, 1.25s, linear, 0.28s);
 
         &:nth-child(2) { animation-delay: 0.48s; }
 
