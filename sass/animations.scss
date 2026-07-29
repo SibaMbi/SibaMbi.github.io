@@ -1,3 +1,5 @@
+@use "core" as *;
+
 // =============================================================================
 // Shared Keyframe Definitions
 // Define once, reuse everywhere via the `animate()` mixin.
@@ -326,3 +328,11 @@ $easing-standard: cubic-bezier(0.215, 0.610, 0.355, 1)  !default;
         }
     }
 }
+
+@include hero-animations();
+@include security-animations();
+@include collection-form-animations();
+@include about-us-animations();
+@include services-animations();
+@include testimonial-animations();
+@include cta-animations();

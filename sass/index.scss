@@ -1,6 +1,4 @@
 @use "core" as *;
-@use "media-queries" as media;
-@use "animations" as anim;
 /* =========================
    A11Y UTILITIES
 ========================= */
@@ -156,7 +154,6 @@ a { @include link-aqua-underline; }
 .mobile-menu-panel {
   display: none;
 }
-@include media.mobile-query();
 /* Hamburger */
 .menu-icon {
   border: 0;
@@ -211,7 +208,6 @@ a { @include link-aqua-underline; }
 .landing-heading {
   @include force-center();
 }
-@include anim.hero-animations();
 
 /* Keep selectors shallow */
 .landing-heading h1 {
@@ -292,7 +288,6 @@ a { @include link-aqua-underline; }
   );
 }
 
-@include anim.security-animations();
 
 
 /* MESSAGE */
@@ -393,7 +388,6 @@ a { @include link-aqua-underline; }
   );
 }
 
-@include anim.collection-form-animations();
 
 .collection-form-inner {
   display: grid;
@@ -491,7 +485,6 @@ a { @include link-aqua-underline; }
       #e6fbf8 100%
     );
 }
-@include anim.about-us-animations();
 /* Left side */
 .about-sales {
   width: 100%;
@@ -568,7 +561,6 @@ a { @include link-aqua-underline; }
   padding: 0;
   font-size: 1.1rem;
 }
-@include anim.services-animations();
 .services-page {
   background:
     radial-gradient(
@@ -670,7 +662,6 @@ a { @include link-aqua-underline; }
   @include link-aqua-underline;
 }
 
-@include anim.testimonial-animations();
 .testimonial-page {
   background: linear-gradient(
     0deg,
@@ -815,7 +806,6 @@ a { @include link-aqua-underline; }
   }
 }
 
-@include anim.cta-animations();
 .cta-page {
   background: linear-gradient(
     270deg,
@@ -984,5 +974,4 @@ a { @include link-aqua-underline; }
     color: $accent;
   }
 }
-@include media.desktop-queries();
 
