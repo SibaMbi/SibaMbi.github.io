@@ -7,6 +7,7 @@
     font-size: 1rem;
     line-height: 1.6;
     text-rendering: optimizeLegibility;
+    overflow-x: hidden;
   }
   .site-header {
     font-size: 100%;
@@ -101,7 +102,8 @@
     line-height: 1.2;
   }
   .landing-heading {
-    margin-left: 1.5rem;
+    margin-left: 0;
+    padding-inline: 1rem;
   }
   .landing-heading h1 {
     font-size: clamp(2.35rem, 9vw, 3rem);

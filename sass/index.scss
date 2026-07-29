@@ -20,12 +20,20 @@
 *::before,
 *::after { box-sizing: border-box; }
 
-html { -webkit-text-size-adjust: 100%; }
+html {
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  max-width: 100%;
+}
 
 body {
   margin: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
   background: $bg;
   color: $ink;
+  overscroll-behavior-x: none;
 }
 
 img {
@@ -226,10 +234,10 @@ a { @include link-aqua-underline; }
 
 /* Your mobile image sizing */
 .landing-visual img {
-  width: 95%;
+  width: min(100%, 95%);
   height: 350px;
   object-fit: contain;
-  margin-left: 1rem;
+  margin: 0 auto;
 }
 
 .hero-features {

@@ -91,6 +91,7 @@ $gutter: clamp(1rem, 3vw, 2rem);
   padding: 0;
   align-items: stretch;
   width: 100%;
+  max-width: 100%;
   cursor: grab;
   -webkit-overflow-scrolling: touch;
   overscroll-behavior-x: contain;
@@ -104,8 +105,10 @@ $gutter: clamp(1rem, 3vw, 2rem);
   align-items: center;
   flex-shrink: 0;
   cursor: grab;
-  margin: 1rem;
-  width: 85%;
+  margin: 1rem 0.5rem;
+  width: min(100%, 320px);
+  max-width: 100%;
+  flex: 0 0 auto;
 }
 
 @mixin button-system {

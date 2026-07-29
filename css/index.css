@@ -26,12 +26,18 @@
 
 html {
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
   margin: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
   background: rgb(253, 252, 253);
   color: rgb(6, 6, 50);
+  overscroll-behavior-x: none;
 }
 
 img {
@@ -395,7 +401,7 @@ a:focus-visible {
   width: 95%;
   height: 350px;
   object-fit: contain;
-  margin-left: 1rem;
+  margin: 0 auto;
 }
 
 .hero-features {
@@ -418,6 +424,7 @@ a:focus-visible {
   padding: 0;
   align-items: stretch;
   width: 100%;
+  max-width: 100%;
   cursor: grab;
   -webkit-overflow-scrolling: touch;
   overscroll-behavior-x: contain;
@@ -431,8 +438,10 @@ a:focus-visible {
   align-items: center;
   flex-shrink: 0;
   cursor: grab;
-  margin: 1rem;
-  width: 85%;
+  margin: 1rem 0.5rem;
+  width: min(100%, 320px);
+  max-width: 100%;
+  flex: 0 0 auto;
   padding: 0.9rem 1rem;
   text-align: center;
   background-color: rgba(253, 252, 253, 0.1);
@@ -699,6 +708,7 @@ a:focus-visible {
   padding: 0;
   align-items: stretch;
   width: 100%;
+  max-width: 100%;
   cursor: grab;
   -webkit-overflow-scrolling: touch;
   overscroll-behavior-x: contain;
@@ -713,8 +723,10 @@ a:focus-visible {
   align-items: center;
   flex-shrink: 0;
   cursor: grab;
-  margin: 1rem;
-  width: 85%;
+  margin: 1rem 0.5rem;
+  width: min(100%, 320px);
+  max-width: 100%;
+  flex: 0 0 auto;
   height: clamp(320px, 15vw, 350px);
   padding: 25px;
   /* You already have .card class; only keep this if you want different transparency than global .card */
@@ -787,6 +799,7 @@ a:focus-visible {
   padding: 0;
   align-items: stretch;
   width: 100%;
+  max-width: 100%;
   cursor: grab;
   -webkit-overflow-scrolling: touch;
   overscroll-behavior-x: contain;
@@ -804,8 +817,10 @@ a:focus-visible {
   align-items: center;
   flex-shrink: 0;
   cursor: grab;
-  margin: 1rem;
-  width: 85%;
+  margin: 1rem 0.5rem;
+  width: min(100%, 320px);
+  max-width: 100%;
+  flex: 0 0 auto;
   /* your mixin likely centers items; you want left aligned content */
   align-items: flex-start;
   padding: 25px;
