@@ -106,7 +106,7 @@
     padding-inline: 1rem;
   }
   .landing-heading h1 {
-    font-size: clamp(3rem, 10vw, 6rem);
+    font-size: clamp(3rem, 9vw, 5rem);
     line-height: 1.06;
     letter-spacing: -0.03em;
     text-wrap: balance;
