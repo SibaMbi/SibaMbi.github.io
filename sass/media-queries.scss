@@ -122,19 +122,19 @@
     }
     
     .landing-heading {
-      margin-left: 0;
+      margin-left: 2rem;
       padding-inline: 1rem;
     }
 
     .landing-heading h1 {
-      @include fluid-type(2.35rem, 9vw, 3rem);
+      @include fluid-type(3.5rem, 10vw, 6rem);
       line-height: 1.06;
       letter-spacing: -0.03em;
       text-wrap: balance;
     }
 
     .hero-subtitle {
-      font-size: 1rem;
+      font-size: 1.25rem;
       line-height: 1.7;
       max-width: 32ch;
       text-wrap: pretty;

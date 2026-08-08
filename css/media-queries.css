@@ -102,17 +102,17 @@
     line-height: 1.2;
   }
   .landing-heading {
-    margin-left: 0;
+    margin-left: 2rem;
     padding-inline: 1rem;
   }
   .landing-heading h1 {
-    font-size: clamp(2.35rem, 9vw, 3rem);
+    font-size: clamp(3.5rem, 10vw, 6rem);
     line-height: 1.06;
     letter-spacing: -0.03em;
     text-wrap: balance;
   }
   .hero-subtitle {
-    font-size: 1rem;
+    font-size: 1.25rem;
     line-height: 1.7;
     max-width: 32ch;
     text-wrap: pretty;
