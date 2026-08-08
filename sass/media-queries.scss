@@ -126,6 +126,12 @@
       padding-inline: 1rem;
     }
 
+    @media (min-width: 500px) and (max-width: 576px) {
+      .landing-heading {
+        margin-left: 2rem;
+      }
+    }
+
     .landing-heading h1 {
       @include fluid-type(3rem, 8vw, 6rem);
       line-height: 1.08;

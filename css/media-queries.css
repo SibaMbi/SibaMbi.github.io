@@ -105,6 +105,13 @@
     margin-left: 0;
     padding-inline: 1rem;
   }
+}
+@media (max-width: 576px) and (min-width: 500px) and (max-width: 576px) {
+  .landing-heading {
+    margin-left: 2rem;
+  }
+}
+@media (max-width: 576px) {
   .landing-heading h1 {
     font-size: clamp(3rem, 8vw, 6rem);
     line-height: 1.08;
