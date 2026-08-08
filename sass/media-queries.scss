@@ -127,8 +127,8 @@
     }
 
     .landing-heading h1 {
-      @include fluid-type(3rem, 8vw, 5rem);
-      line-height: 1.06;
+      @include fluid-type(3rem, 8vw, 6rem);
+      line-height: 1.08;
       letter-spacing: -0.03em;
       text-wrap: balance;
     }
