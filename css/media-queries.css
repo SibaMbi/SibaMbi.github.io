@@ -102,11 +102,11 @@
     line-height: 1.2;
   }
   .landing-heading {
-    margin-left: 2rem;
+    margin-left: 1rem;
     padding-inline: 1rem;
   }
   .landing-heading h1 {
-    font-size: clamp(3.5rem, 10vw, 6rem);
+    font-size: clamp(3rem, 10vw, 6rem);
     line-height: 1.06;
     letter-spacing: -0.03em;
     text-wrap: balance;
