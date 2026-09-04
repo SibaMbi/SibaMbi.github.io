@@ -520,9 +520,7 @@
   .main-nav-cta:active {
     box-shadow: none;
   }
-  .main-nav-cta {
-    /* you had black outline here; keep it */
-  }
+
   .main-nav-cta:focus {
     outline: 2px solid #000;
     outline-offset: 3px;
