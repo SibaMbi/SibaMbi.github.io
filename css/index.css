@@ -773,111 +773,104 @@ a:focus-visible {
 }
 .services-message h2 {
   color: rgb(6, 6, 50);
-  font-size: clamp(2.7rem, 6vw, 6rem);
+  font-size: clamp(2.7rem, 4vw, 5rem);
   margin: 0 0 15px 0;
+  font-weight: 600;
+  line-height: 1.3;
 }
 .services-message p {
   font-size: 1.1rem;
   margin: 0;
-  color: rgb(27, 27, 82);
+  color: #393c43;
+  font-weight: 300;
+  line-height: 1.6;
 }
 
-/* Mobile: scroll row */
 .services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
   list-style: none;
-  display: flex;
-  overflow-x: auto;
-  overflow-y: hidden;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-.services-grid ::-webkit-scrollbar {
-  display: none;
-}
-.services-grid {
-  margin: 0;
   padding: 0;
-  align-items: stretch;
-  width: 100%;
-  max-width: 100%;
-  cursor: grab;
-  -webkit-overflow-scrolling: touch;
-  overscroll-behavior-x: contain;
-  touch-action: pan-x;
-  align-items: stretch;
-  /* IMPORTANT: allow wrapping inside cards on Firefox */
-  white-space: normal;
-  /* justify-items does nothing on flex; remove */
+  margin: 0;
 }
 
 .service-card {
+  border-radius: 16px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-items: center;
-  align-items: center;
-  flex-shrink: 0;
-  cursor: grab;
-  margin: 1rem 0.5rem;
-  width: min(100%, 320px);
-  max-width: 100%;
-  flex: 0 0 auto;
-  /* your mixin likely centers items; you want left aligned content */
-  align-items: flex-start;
-  padding: 25px;
-  background-color: rgba(251, 252, 253, 0.75);
-  border-radius: 0;
-  box-shadow: 0px 0.5px 1.5px 1px rgba(207, 204, 204, 0.33);
-  max-width: 400px;
-  height: clamp(350px, 15vw, 370px);
-  /* ensure text wraps consistently */
-  white-space: normal;
-  overflow-wrap: anywhere;
-  transition: transform 0.3s ease-in-out;
+  background: #ffffff;
 }
-.service-card:hover {
-  transform: scale(1.05);
+
+/* Top icon panel */
+.service-icon-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  min-height: 130px;
+  background: #e6f5ed;
+  position: relative;
 }
 
 .service-icon {
-  display: block;
+  width: 56px;
+  height: 56px;
   color: aqua;
-  margin-bottom: 0.75rem;
+}
+
+.service-tag {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #ffffff;
+  color: aqua;
+}
+
+/* Bottom text panel */
+.service-text-panel {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
 }
 
 .service-title {
-  color: rgb(6, 6, 50);
-  font-size: 1.4rem;
-  margin: 0 0 0.5rem 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0;
 }
 
 .service-text {
-  font-size: 1.1rem;
-  color: rgb(27, 27, 82);
+  font-size: 12px;
+  color: #393c43;
+  font-weight: 300;
+  line-height: 1.6;
+  flex: 1;
   margin: 0;
-  white-space: normal;
-  overflow-wrap: anywhere;
 }
 
 .service-link {
-  display: inline-block;
-  margin-top: 15px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: aqua;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: auto;
 }
 .service-link:hover {
-  text-decoration: underline;
-  text-decoration-color: aqua;
-  text-underline-offset: 0.4em;
-}
-.service-link:focus {
-  outline: 2px solid aqua;
-  outline-offset: 4px;
-}
-.service-link:focus:not(:focus-visible) {
-  outline: none;
-}
-.service-link:focus-visible {
-  outline: 2px solid aqua;
-  outline-offset: 4px;
+  color: aqua;
 }
 
 .testimonial-page {

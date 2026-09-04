@@ -597,77 +597,107 @@ a { @include link-aqua-underline; }
 
   h2 {
     color: $ink;
-    @include fluid-type(2.7rem, 6vw, 6rem);
+    @include fluid-type(2.7rem, 4vw, 5rem);
     margin: 0 0 15px 0;
+    font-weight: 600;
+    line-height: 1.3;
   }
 
   p {
     font-size: 1.1rem;
     margin: 0;
-    color: $ink-2;
+    color: #393c43;
+    font-weight: 300;
+    line-height: 1.6;
   }
 }
 
-/* Mobile: scroll row */
 .services-grid {
-  @include make-scrollable;
-  align-items: stretch;
-
-  /* IMPORTANT: allow wrapping inside cards on Firefox */
-  white-space: normal;
-
-  /* justify-items does nothing on flex; remove */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .service-card {
-  @include scroll-feature;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+}
 
-  /* your mixin likely centers items; you want left aligned content */
-  align-items: flex-start;
-
-  padding: 25px;
-  background-color: rgba(251, 252, 253, 0.75);
-  border-radius: 0;
-  box-shadow: $shadow-soft;
-  max-width: 400px;
-  height: clamp(350px, 15vw, 370px);
-
-  /* ensure text wraps consistently */
-  white-space: normal;
-  overflow-wrap: anywhere;
-
-  transition: transform 0.3s ease-in-out;
-
-  &:hover {
-    transform: scale(1.05);
-  }
+/* Top icon panel */
+.service-icon-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  min-height: 130px;
+  background: #e6f5ed;
+  position: relative;
 }
 
 .service-icon {
-  display: block;
-  color: $accent;
-  margin-bottom: 0.75rem;
+  width: 56px;
+  height: 56px;
+  color: aqua;
+}
+
+.service-tag {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #ffffff;
+  color: aqua;
+}
+
+/* Bottom text panel */
+.service-text-panel {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
 }
 
 .service-title {
-  color: $ink;
-  font-size: 1.4rem;
-  margin: 0 0 0.5rem 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0;
 }
 
 .service-text {
-  font-size: 1.1rem;
-  color: $ink-2;
+  font-size: 12px;
+  color: #393c43;
+  font-weight: 300;
+  line-height: 1.6;
+  flex: 1;
   margin: 0;
-
-  white-space: normal;
-  overflow-wrap: anywhere;
 }
 
 .service-link {
-  display: inline-block;
-  margin-top: 15px;
-  @include link-aqua-underline;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: aqua;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: auto;
+
+  &:hover {
+    color: aqua;
+  }
 }
 
 .testimonial-page {
