@@ -546,6 +546,40 @@ a:focus-visible {
   background: radial-gradient(ellipse at 85% 25%, #dff7f5 0%, rgba(255, 255, 255, 0) 50%), linear-gradient(135deg, rgb(253, 252, 253) 0%, #f6fffd 55%, #e6fbf8 100%);
 }
 
+.storage-features-header {
+  max-width: 1280px;
+  margin: 0 auto clamp(2rem, 4vw, 4rem);
+  padding: 0 24px;
+  text-align: left;
+}
+
+.storage-feature-eyebrow {
+  margin: 0 0 0.75rem;
+  color: rgb(0, 160, 160);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.storage-features-title {
+  margin: 0;
+  color: rgb(6, 6, 50);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(40px, 6vw, 72px);
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.storage-features-subtitle {
+  margin: 1rem 0 0;
+  color: rgb(27, 27, 82);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.65;
+}
+
 .storage-features-list {
   list-style: none;
   display: flex;
