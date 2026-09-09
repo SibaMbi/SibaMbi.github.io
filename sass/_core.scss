@@ -24,6 +24,16 @@ $gutter: clamp(1rem, 3vw, 2rem);
   font-size: clamp(#{$min}, #{$pref}, #{$max});
 }
 
+@mixin heading-style {
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+@mixin subtitle-style {
+  line-height: 1.65;
+}
+
 /* focus-visible + fallback */
 @mixin focus-ring($color: $accent, $offset: 4px) {
   &:focus { outline: 2px solid $color; outline-offset: $offset; }
@@ -122,14 +132,6 @@ $gutter: clamp(1rem, 3vw, 2rem);
     line-height: 1;
 
     @include focus-ring($accent, 4px);
-  }
-
-  .btn-aqua-pill {
-    background-color: $accent;
-    color: #fff;
-    border-radius: $radius-pill;
-    padding: 10px 20px;
-    @include button-shadow-hover;
   }
 
   .btn-aqua-rect {

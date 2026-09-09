@@ -117,21 +117,17 @@ $easing-standard: cubic-bezier(0.215, 0.610, 0.355, 1)  !default;
 // =============================================================================
 
 @mixin hero-animations {
-    .hero-title    { @include hidden-before-animate(translateX(-100px)); }
+    .hero-heading  { @include hidden-before-animate(translateX(-100px)); }
     .hero-subtitle { @include hidden-before-animate(translateX(-100px)); }
-    .primary-cta   { @include hidden-before-animate(translateX(-100px)); }
+    .btn-primary   { @include hidden-before-animate(translateX(-100px)); }
 
-    .hero-title,
+    .hero-heading,
     .hero-subtitle,
-    .primary-cta {
+    .btn-primary {
         @include animate(slideLeft, 3.1s, $easing-spring, 0.05s);
     }
     .hero-subtitle { animation-delay: 0.7s; }
-    .primary-cta   { animation-delay: 1.2s; }
-
-    .hero-visual {
-        @include animate(swingInBottom, 1.8s, ease-in);
-    }
+    .btn-primary   { animation-delay: 1.2s; }
 
     // Feature cards
     .storage-feature-card {
@@ -218,20 +214,6 @@ $easing-standard: cubic-bezier(0.215, 0.610, 0.355, 1)  !default;
             transform: translateX(0) !important;
         }
     }
-}
-
-@mixin collection-form-animations {
-    .collection-title,
-    .collection-subtitle,
-    .field,
-    .collection-action {
-        @include hidden-before-animate();
-    }
-
-    .collection-title.is-visible    { @include animate(fadeInUp); }
-    .collection-subtitle.is-visible { @include animate(fadeInUp, 1s, $easing-smooth, 0.25s); }
-    .field.is-visible               { @include animate(fadeInUp, 1s, $easing-smooth, 0.5s); }
-    .collection-action.is-visible   { @include animate(bounceBottom, 0.9s, linear, 0.7s); }
 }
 
 @mixin about-us-animations {
@@ -331,7 +313,6 @@ $easing-standard: cubic-bezier(0.215, 0.610, 0.355, 1)  !default;
 
 @include hero-animations();
 @include security-animations();
-@include collection-form-animations();
 @include about-us-animations();
 @include services-animations();
 @include testimonial-animations();

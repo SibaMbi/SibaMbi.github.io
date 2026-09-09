@@ -101,7 +101,7 @@ a:focus-visible {
 /* =========================
    BUTTON SYSTEM
 ========================= */
-.btn, .submit-form, .collection-button {
+.btn, .submit-form {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -110,64 +110,39 @@ a:focus-visible {
   font-size: 1.2em;
   line-height: 1;
 }
-.btn:focus, .submit-form:focus, .collection-button:focus {
+.btn:focus, .submit-form:focus {
   outline: 2px solid aqua;
   outline-offset: 4px;
 }
-.btn:focus:not(:focus-visible), .submit-form:focus:not(:focus-visible), .collection-button:focus:not(:focus-visible) {
+.btn:focus:not(:focus-visible), .submit-form:focus:not(:focus-visible) {
   outline: none;
 }
-.btn:focus-visible, .submit-form:focus-visible, .collection-button:focus-visible {
+.btn:focus-visible, .submit-form:focus-visible {
   outline: 2px solid aqua;
   outline-offset: 4px;
 }
 
-.btn-aqua-pill {
-  background-color: aqua;
-  color: #fff;
-  border-radius: 1.5em;
-  padding: 10px 20px;
-  transition: box-shadow 0.4s ease-in-out;
-}
-.btn-aqua-pill:hover {
-  box-shadow: 0 2px 4px rgba(116, 114, 114, 0.5);
-}
-.btn-aqua-pill:active {
-  box-shadow: none;
-}
-.btn-aqua-pill:focus {
-  outline: 2px solid aqua;
-  outline-offset: 4px;
-}
-.btn-aqua-pill:focus:not(:focus-visible) {
-  outline: none;
-}
-.btn-aqua-pill:focus-visible {
-  outline: 2px solid aqua;
-  outline-offset: 4px;
-}
-
-.btn-aqua-rect, .submit-form, .collection-button {
+.btn-aqua-rect, .submit-form {
   background-color: aqua;
   color: #fff;
   border-radius: 0.3rem;
   padding: 12px 22px;
   transition: box-shadow 0.4s ease-in-out;
 }
-.btn-aqua-rect:hover, .submit-form:hover, .collection-button:hover {
+.btn-aqua-rect:hover, .submit-form:hover {
   box-shadow: 0 2px 4px rgba(116, 114, 114, 0.5);
 }
-.btn-aqua-rect:active, .submit-form:active, .collection-button:active {
+.btn-aqua-rect:active, .submit-form:active {
   box-shadow: none;
 }
-.btn-aqua-rect:focus, .submit-form:focus, .collection-button:focus {
+.btn-aqua-rect:focus, .submit-form:focus {
   outline: 2px solid aqua;
   outline-offset: 4px;
 }
-.btn-aqua-rect:focus:not(:focus-visible), .submit-form:focus:not(:focus-visible), .collection-button:focus:not(:focus-visible) {
+.btn-aqua-rect:focus:not(:focus-visible), .submit-form:focus:not(:focus-visible) {
   outline: none;
 }
-.btn-aqua-rect:focus-visible, .submit-form:focus-visible, .collection-button:focus-visible {
+.btn-aqua-rect:focus-visible, .submit-form:focus-visible {
   outline: 2px solid aqua;
   outline-offset: 4px;
 }
@@ -366,41 +341,209 @@ a:focus-visible {
    HERO
 ========================= */
 .hero {
-  background: #111;
-  padding: 0 1rem 4rem;
-  align-items: center;
+  display: block;
+  background: rgb(41, 38, 38);
+  padding-bottom: 4rem;
 }
 
-.landing-heading {
-  width: min(100%, 42rem);
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left;
-  padding: 4rem 1rem 2rem;
+.hero-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Keep selectors shallow */
-.landing-heading h1 {
-  padding-top: 0;
-  position: relative;
+.hero-copy {
+  flex: 1;
+  padding-top: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-eyebrow,
+.form-eyebrow {
+  margin: 0;
+  color: aqua;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.hero-heading,
+.form-heading {
+  margin: 0;
   color: #fff;
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: clamp(3.2rem, 9vw, 5.5rem);
-  font-weight: 400;
-  line-height: 1;
-  margin-bottom: 15px;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.hero-heading {
+  font-size: clamp(44px, 6vw, 72px);
+}
+
+.hero-heading-em {
+  display: block;
+  color: #00d4cc;
+  font-style: italic;
 }
 
 .hero-subtitle {
-  max-width: 28rem;
-  color: rgba(255, 255, 255, 0.55);
-  font-size: clamp(1rem, 2vw, 1.15rem);
-  line-height: 1.6;
-  margin-bottom: 2rem;
+  max-width: 380px;
+  margin: 20px 0 0;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.65;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.btn-primary {
+  padding: 12px 24px;
+  border: 0;
+  border-radius: 1.5em;
+  background: aqua;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-primary:hover {
+  opacity: 0.88;
+}
+
+.hero-trust {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero-trust-dot {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: aqua;
+}
+
+.hero-trust-text,
+.form-subtext,
+.form-disclaimer {
+  color: #fff;
+}
+
+.hero-trust-text {
+  font-size: 12px;
+}
+
+.hero-form-panel {
+  flex: 1;
+  padding: 40px 0 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+}
+
+.form-eyebrow {
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.form-heading {
+  color: aqua;
+  font-size: 40px;
+  line-height: 1;
+}
+
+.form-subtext {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.hero-form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-field label {
+  color: aqua;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.form-field input[type=date] {
+  width: 100%;
+  padding: 12px 0;
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  outline: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+  color-scheme: dark;
+  transition: border-color 0.2s;
+}
+
+.form-field input[type=date]:hover,
+.form-field input[type=date]:focus {
+  border-bottom-color: rgba(255, 255, 255, 0.35);
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 16px;
+  border: 0;
+  border-radius: 1.2rem;
+  background: aqua;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-submit:hover {
+  opacity: 0.88;
+}
+
+.form-disclaimer {
+  margin: 0;
+  text-align: center;
+  font-size: 12px;
 }
 
 .storage-features {
-  margin-top: 1.5rem;
+  margin-top: 0;
+  padding-block: clamp(3rem, 5vw, 6rem);
+  background: radial-gradient(ellipse at 85% 25%, #dff7f5 0%, rgba(255, 255, 255, 0) 50%), linear-gradient(135deg, rgb(253, 252, 253) 0%, #f6fffd 55%, #e6fbf8 100%);
 }
 
 .storage-features-list {
@@ -461,13 +604,13 @@ a:focus-visible {
 
 .storage-feature-title {
   display: block;
-  color: #fff;
+  color: rgb(6, 6, 50);
   font-size: clamp(1.6rem, 2.5vw, 2.4rem);
   margin: 0.25rem 0;
 }
 
 .storage-feature-text {
-  color: rgba(255, 255, 255, 0.55);
+  color: rgb(27, 27, 82);
   font-size: clamp(1.4rem, 2.5vw, 1.8rem);
   margin: 0 0 1rem 0;
 }
@@ -563,95 +706,6 @@ a:focus-visible {
   font-size: clamp(1.1rem, 2vw, 1.6rem);
 }
 
-.collection-form {
-  width: min(100%, 32rem);
-  margin: 0 auto;
-  background: transparent;
-}
-
-.collection-form-inner {
-  display: grid;
-  justify-items: center;
-}
-
-.collection-page {
-  width: 100%;
-  max-width: 900px;
-  text-align: center;
-}
-
-.collection-header h2 {
-  color: #fff;
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: clamp(2.2rem, 6vw, 3.3rem);
-  font-weight: 400;
-  margin: 0.5rem 0 1rem 0;
-  line-height: 1.2em;
-}
-
-.collection-subtitle {
-  color: rgba(255, 255, 255, 0.4);
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  margin: 0 0 2rem 0;
-}
-
-.collection-fields {
-  border: 0;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 3rem;
-}
-
-.field {
-  text-align: left;
-}
-
-.field label {
-  display: block;
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin-bottom: 0.75rem;
-  color: rgba(255, 255, 255, 0.4);
-  text-align: center;
-}
-
-.field input {
-  display: block;
-  width: 100%;
-  background-color: transparent;
-  padding: 0.8rem 0;
-  border: 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 0;
-  color: #fff;
-  text-align: left;
-  color-scheme: dark;
-}
-.field input:hover {
-  background-color: transparent;
-  border-bottom-color: rgba(255, 255, 255, 0.45);
-}
-.field input:focus {
-  outline: 2px solid aqua;
-  outline-offset: 4px;
-}
-.field input:focus:not(:focus-visible) {
-  outline: none;
-}
-.field input:focus-visible {
-  outline: 2px solid aqua;
-  outline-offset: 4px;
-}
-
-.collection-action {
-  margin-top: 1.2rem;
-  display: grid;
-  justify-items: center;
-}
-
 .about-us-page {
   display: flex;
   flex-direction: column;
@@ -669,6 +723,9 @@ a:focus-visible {
 .about-header h2 {
   color: rgb(6, 6, 50);
   font-size: clamp(2.8rem, 5vw, 4rem);
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.02em;
   margin: 0 0 clamp(1.5rem, 3vw, 2.5rem);
 }
 
@@ -755,6 +812,9 @@ a:focus-visible {
 .about-feature-title {
   color: rgb(6, 6, 50);
   font-size: 1.4rem;
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.02em;
   margin: 0.5rem 0;
 }
 
@@ -781,15 +841,16 @@ a:focus-visible {
   color: rgb(6, 6, 50);
   font-size: clamp(2.7rem, 4vw, 5rem);
   margin: 0 0 15px 0;
-  font-weight: 600;
-  line-height: 1.3;
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.02em;
 }
 .services-message p {
   font-size: 1.1rem;
   margin: 0;
   color: #393c43;
   font-weight: 300;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 .services-grid {
@@ -849,8 +910,9 @@ a:focus-visible {
 
 .service-title {
   font-size: 14px;
-  font-weight: 600;
-  line-height: 1.3;
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.02em;
   margin: 0;
 }
 
@@ -858,7 +920,7 @@ a:focus-visible {
   font-size: 12px;
   color: #393c43;
   font-weight: 300;
-  line-height: 1.6;
+  line-height: 1.65;
   flex: 1;
   margin: 0;
 }
@@ -1031,7 +1093,9 @@ a:focus-visible {
 .cta-message h2 {
   color: white;
   font-size: clamp(2.4rem, 4vw, 3.2rem);
-  line-height: 1.3;
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.02em;
   text-align: center;
   margin-bottom: 30px;
 }
@@ -1066,16 +1130,26 @@ a:focus-visible {
   font-size: 2.2rem;
   margin: 0 0 5px 0;
   color: #fff;
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.02em;
 }
 
 .company-links h3, .service-links h3 {
   color: #fff;
 }
 
+.footer-title {
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
 .footer-header p {
   font-size: 1.1rem;
   margin: 0 0 20px 0;
   color: #fff;
+  line-height: 1.65;
 }
 
 .footer-title {

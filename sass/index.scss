@@ -169,7 +169,6 @@ a { @include link-aqua-underline; }
 
   width: 40px;
   height: 25px;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -192,46 +191,203 @@ a { @include link-aqua-underline; }
    HERO
 ========================= */
 .hero {
-  background-color: $topnav-bg;
+  display: block;
+  background: $topnav-bg;
   padding-bottom: 4rem;
-  align-items: center;
 }
 
-.landing-heading {
-  @include force-center();
+.hero-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Keep selectors shallow */
-.landing-heading h1 {
-  padding-top: 5rem;
-  position: relative;
-  color: $ink;
-  @include fluid-type(4rem, 6vw, 5rem);
-  line-height: 1.2;
-  margin-bottom: 15px;
+.hero-copy {
+  flex: 1;
+  padding-top: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-eyebrow,
+.form-eyebrow {
+  margin: 0;
+  color: $accent;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.hero-heading,
+.form-heading {
+  margin: 0;
+  color: #fff;
+  font-family: Georgia, 'Times New Roman', serif;
+  @include heading-style;
+}
+
+.hero-heading {
+  @include fluid-type(44px, 6vw, 72px);
+}
+
+.hero-heading-em {
+  display: block;
+  color: #00d4cc;
+  font-style: italic;
 }
 
 .hero-subtitle {
-  font-size: 1.3em;
-  margin-bottom: 25px;
+  max-width: 380px;
+  margin: 20px 0 0;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 300;
+  @include subtitle-style;
 }
 
-/* Your mobile image sizing */
-.landing-visual img {
-  width: min(100%, 95%);
-  height: 350px;
-  object-fit: contain;
-  margin: 0 auto;
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.btn-primary {
+  padding: 12px 24px;
+  border: 0;
+  border-radius: $radius-pill;
+  background: $accent;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-primary:hover { opacity: 0.88; }
+
+.hero-trust {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero-trust-dot {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: $accent;
+}
+
+.hero-trust-text,
+.form-subtext,
+.form-disclaimer {
+  color: #fff;
+}
+
+.hero-trust-text {
+  font-size: 12px;
+}
+
+.hero-form-panel {
+  flex: 1;
+  padding: 40px 0 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+}
+
+.form-eyebrow { margin-bottom: 8px; color: #fff; }
+
+.form-heading {
+  color: $accent;
+  font-size: 40px;
+  line-height: 1;
+}
+
+.form-subtext {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.hero-form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-field label {
+  color: $accent;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.form-field input[type='date'] {
+  width: 100%;
+  padding: 12px 0;
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  outline: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+  color-scheme: dark;
+  transition: border-color 0.2s;
+}
+
+.form-field input[type='date']:hover,
+.form-field input[type='date']:focus {
+  border-bottom-color: rgba(255, 255, 255, 0.35);
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 16px;
+  border: 0;
+  border-radius: $radius-lg;
+  background: $accent;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-submit:hover { opacity: 0.88; }
+
+.form-disclaimer {
+  margin: 0;
+  text-align: center;
+  font-size: 12px;
 }
 
 .storage-features {
-  margin-top: 1.5rem;
+  margin-top: 0;
   padding-block: clamp(3rem, 5vw, 6rem);
   background:
     radial-gradient(
       ellipse at 85% 25%,
-      #9fe7e5 0%,
-      #dff7f5 40%,
+      #dff7f5 0%,
       rgba(255, 255, 255, 0) 50%
     ),
     linear-gradient(
@@ -252,7 +408,6 @@ a { @include link-aqua-underline; }
   text-align: center;
   @include card-soft(rgba(253, 252, 253, 0.10), 10px);
 
-    // If you want the “interactive feel” without changing design:
   transition: transform 0.15s ease;
 
   &:hover {
@@ -385,95 +540,6 @@ a { @include link-aqua-underline; }
   @include fluid-type(1.1rem, 2vw, 1.6rem);
 }
 
-.collection-form {
-  background: linear-gradient(
-    0deg,
-    #ffffff 88%,
-    rgba(253, 252, 253, 0.15) 90%,
-    rgba(253, 252, 253, 0.3) 92%,
-    rgba(253, 252, 253, 0.5) 95%,
-    rgba(253, 252, 253, 0.7) 97%,
-    rgb(253, 252, 253) 100%
-  );
-}
-
-
-.collection-form-inner {
-  display: grid;
-  justify-items: center;
-}
-
-.collection-page {
-  width: 100%;
-  max-width: 900px;
-  text-align: center;
-}
-
-.collection-header h2 {
-  color: $ink;
-  @include fluid-type(2.7rem, 6vw, 6rem);
-  margin: 0.5rem 0 1rem 0;
-  line-height: 1.2em;
-}
-
-.collection-subtitle {
-  color: $ink-2;
-  @include fluid-type(1.2rem, 3vw, 3rem);
-  margin: 0 0 2rem 0;
-}
-
-.collection-fields {
-  border: 0;
-  margin: 0;
-  padding: 0;
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 3rem;
-}
-
-.field {
-  text-align: left;
-}
-
-.field label {
-  display: block;
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin-bottom: 0.75rem;
-  color: $accent;
-  text-align: center;
-}
-
-.field input {
-  display: block;
-  background-color: $bg;
-  padding: 0.8rem 4rem;
-  border: 0;
-  border-radius: $radius-sm;  
-  text-align: center;
-
-  &:hover {
-    background-color: rgb(250, 255, 255);
-    box-shadow: 0px 1px 2px 2px rgba(234, 233, 233, 0.33);
-  }
-
-  @include focus-ring();
-}
-
-.collection-action {
-  margin-top: 1.2rem;
-  display: grid;
-  justify-items: center;
-}
-
-// keep your exact button feel, but using the shared system
-.collection-button {
-  @extend .btn;
-  @extend .btn-aqua-rect;
-}
-
 .about-us-page {
   display: flex;
   flex-direction: column;
@@ -503,6 +569,7 @@ a { @include link-aqua-underline; }
 .about-header h2 {
   color: $ink;
   font-size: clamp(2.8rem, 5vw, 4rem);
+  @include heading-style;
   margin: 0 0 clamp(1.5rem, 3vw, 2.5rem);
 }
 
@@ -562,6 +629,7 @@ a { @include link-aqua-underline; }
 .about-feature-title {
   color: $ink;
   font-size: 1.4rem;
+  @include heading-style;
   margin: 0.5rem 0;
 }
 
@@ -600,8 +668,7 @@ a { @include link-aqua-underline; }
     color: $ink;
     @include fluid-type(2.7rem, 4vw, 5rem);
     margin: 0 0 15px 0;
-    font-weight: 600;
-    line-height: 1.3;
+    @include heading-style;
   }
 
   p {
@@ -609,7 +676,7 @@ a { @include link-aqua-underline; }
     margin: 0;
     color: #393c43;
     font-weight: 300;
-    line-height: 1.6;
+    @include subtitle-style;
   }
 }
 
@@ -670,8 +737,7 @@ a { @include link-aqua-underline; }
 
 .service-title {
   font-size: 14px;
-  font-weight: 600;
-  line-height: 1.3;
+  @include heading-style;
   margin: 0;
 }
 
@@ -679,7 +745,7 @@ a { @include link-aqua-underline; }
   font-size: 12px;
   color: #393c43;
   font-weight: 300;
-  line-height: 1.6;
+  @include subtitle-style;
   flex: 1;
   margin: 0;
 }
@@ -722,16 +788,14 @@ a { @include link-aqua-underline; }
 .testimonial-header h2 {
   margin: 0 0 1rem 0;
   font-size: clamp(2.4rem, 4.3vw, 3.3rem);
-  line-height: 1.15;
-  font-weight: 800;
-  letter-spacing: -0.02em;
+  @include heading-style;
   color: $ink;
 }
 
 .testimonial-header p {
   margin: 0;
   font-size: 1.4rem;
-  line-height: 1.65;
+  @include subtitle-style;
   color: #555;
 }
 
@@ -865,7 +929,7 @@ a { @include link-aqua-underline; }
 .cta-message h2 {
   color: white;
   font-size: clamp(2.4rem, 4vw, 3.2rem); 
-  line-height: 1.3;
+  @include heading-style;
   text-align: center;
   margin-bottom: 30px;
 }
@@ -899,16 +963,22 @@ a { @include link-aqua-underline; }
   font-size: 2.2rem;
   margin: 0 0 5px 0;
   color: #fff;
+  @include heading-style;
 }
 
 .company-links h3, .service-links h3 {
   color: #fff;
 }
 
+.footer-title {
+  @include heading-style;
+}
+
 .footer-header p {
   font-size: 1.1rem;
   margin: 0 0 20px 0;
   color: #fff;
+  @include subtitle-style;
 }
 
 .footer-title {
