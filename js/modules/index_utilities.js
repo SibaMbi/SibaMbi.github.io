@@ -357,6 +357,7 @@ export function initRevealObserver() {
   const revealTargets = document.querySelectorAll(
     [
       '.storage-feature-card',
+      '.storage-features-header',
       '.form-heading',
       '.form-subtext',
       '.form-field',

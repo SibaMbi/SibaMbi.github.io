@@ -4,6 +4,10 @@ $ink-2: rgb(27, 27, 82);
 $accent: aqua;
 $bg: rgb(253, 252, 253);
 $topnav-bg: rgb(41, 38, 38);
+$font-display: Georgia, "Times New Roman", serif;
+$eyebrow-size: 11px;
+$eyebrow-weight: 600;
+$eyebrow-tracking: 0.2em;
 
 // Shadows
 $shadow-soft: 0px 0.5px 1.5px 1px rgba(207, 204, 204, 0.33);
@@ -32,6 +36,15 @@ $gutter: clamp(1rem, 3vw, 2rem);
 
 @mixin subtitle-style {
   line-height: 1.65;
+}
+
+@mixin eyebrow-style {
+  margin: 0;
+  color: $accent;
+  font-size: $eyebrow-size;
+  font-weight: $eyebrow-weight;
+  letter-spacing: $eyebrow-tracking;
+  text-transform: uppercase;
 }
 
 /* focus-visible + fallback */

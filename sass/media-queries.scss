@@ -145,7 +145,7 @@
 
     .storage-feature-text,
     .about-feature-list,
-    .security-message p,
+    .security-message > p:not(.security-eyebrow),
     .services-message p,
     .testimonial-header p,
     .customer-quote p,
@@ -309,9 +309,7 @@
     }
     
     .security-message {
-      text-align: center;
-      h2 { @include fluid-type(3rem, 5.5vw, 3.5rem); }
-      p  { @include fluid-type(1.3rem, 2.5vw, 1.6rem); }
+      width: 100%;
     }
 
     .security-icons {
@@ -350,7 +348,7 @@
     .security-icon-card {
       flex: 0 0 23%;
       width: 23%;
-      padding: 1.5rem 0.75rem 2.5rem;
+      padding: 0.9rem 0.6rem 1.25rem;
     }
 
     .security-icons:hover .security-icons-track {
@@ -359,16 +357,13 @@
     }
 
     .security-icon-image {
-      height: 120px;
+      height: clamp(90px, 10vw, 110px);
     }
 
     .security-icon-title {
-      @include fluid-type(1.4rem, 2.6vw, 1.8rem);
+      @include fluid-type(1.1rem, 2vw, 1.5rem);
     }
 
-    .security-map iframe {
-      height: 300px;
-    }
     .about-feature-list {
       font-size: 1rem;
     }
@@ -657,22 +652,14 @@
       grid-column: 1 / 2;
       grid-row: 1 / 2;
 
-      /* on desktop, stop force-centering; grid controls layout */
-      width: auto;
+      width: 100%;
       margin: 0;
-      padding-inline: 0;
-
-      padding-left: clamp(2rem, 5vw, 4rem);
+      padding-inline: 24px;
       justify-self: start;
       text-align: left;
 
       h2 {
         text-align: left;
-        @include fluid-type(2rem, 4vw, 3.2rem);
-      }
-
-      p {
-        @include fluid-type(1.15rem, 1.6vw, 1.35rem);
       }
     }
 
@@ -682,9 +669,7 @@
 
       width: 100%;
       margin: 0;
-      padding-inline: 0;
-
-      /* preferred: aspect-ratio */
+      height: auto;
       aspect-ratio: 16 / 9;
 
       iframe {

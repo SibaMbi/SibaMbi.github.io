@@ -125,7 +125,7 @@
   }
   .storage-feature-text,
   .about-feature-list,
-  .security-message p,
+  .security-message > p:not(.security-eyebrow),
   .services-message p,
   .testimonial-header p,
   .customer-quote p,
@@ -264,13 +264,7 @@
     font-size: clamp(1.7rem, 2.9vw, 2rem);
   }
   .security-message {
-    text-align: center;
-  }
-  .security-message h2 {
-    font-size: clamp(3rem, 5.5vw, 3.5rem);
-  }
-  .security-message p {
-    font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+    width: 100%;
   }
   .security-icons {
     width: 100%;
@@ -304,20 +298,17 @@
   .security-icon-card {
     flex: 0 0 23%;
     width: 23%;
-    padding: 1.5rem 0.75rem 2.5rem;
+    padding: 0.9rem 0.6rem 1.25rem;
   }
   .security-icons:hover .security-icons-track {
     -webkit-animation-play-state: paused;
     animation-play-state: paused;
   }
   .security-icon-image {
-    height: 120px;
+    height: clamp(90px, 10vw, 110px);
   }
   .security-icon-title {
-    font-size: clamp(1.4rem, 2.6vw, 1.8rem);
-  }
-  .security-map iframe {
-    height: 300px;
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
   }
   .about-feature-list {
     font-size: 1rem;
@@ -581,29 +572,22 @@
   .security-message {
     grid-column: 1/2;
     grid-row: 1/2;
-    /* on desktop, stop force-centering; grid controls layout */
-    width: auto;
+    width: 100%;
     margin: 0;
-    padding-inline: 0;
-    padding-left: clamp(2rem, 5vw, 4rem);
+    padding-inline: 24px;
     justify-self: start;
     text-align: left;
   }
   .security-message h2 {
     text-align: left;
-    font-size: clamp(2rem, 4vw, 3.2rem);
-  }
-  .security-message p {
-    font-size: clamp(1.15rem, 1.6vw, 1.35rem);
   }
   .security-map {
     grid-column: 2/3;
     grid-row: 1/2;
     width: 100%;
     margin: 0;
-    padding-inline: 0;
-    /* preferred: aspect-ratio */
-    aspect-ratio: 16/9;
+    height: auto;
+    aspect-ratio: 16 / 9;
   }
   .security-map iframe {
     width: 100%;

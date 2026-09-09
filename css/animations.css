@@ -222,6 +222,14 @@
 .storage-feature-card.is-visible .storage-feature-text {
   animation: slideLeft 1.1s cubic-bezier(0.22, 1, 0.36, 1) 0.5s 1 normal both;
 }
+.storage-features-header {
+  opacity: 0;
+  transform: translateY(40px);
+  will-change: transform, opacity;
+}
+.storage-features-header.is-visible {
+  animation: slideUp 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0s 1 normal both;
+}
 
 .about-feature {
   opacity: 0;
@@ -313,9 +321,11 @@
 
 @media (prefers-reduced-motion: reduce) {
   .security-icons-track,
-  .security-icons-track > .security-icons-list:first-child {
+  .security-icons-track > .security-icons-list:first-child,
+  .storage-features-header {
     animation: none !important;
-    transform: translateX(0) !important;
+    transform: none !important;
+    opacity: 1 !important;
   }
 }
 .about-us-title {

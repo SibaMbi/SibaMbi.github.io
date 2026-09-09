@@ -364,7 +364,9 @@ a:focus-visible {
 }
 
 .hero-eyebrow,
-.form-eyebrow {
+.form-eyebrow,
+.storage-feature-eyebrow,
+.security-eyebrow {
   margin: 0;
   color: aqua;
   font-size: 11px;
@@ -459,7 +461,6 @@ a:focus-visible {
 
 .form-eyebrow {
   margin-bottom: 8px;
-  color: #fff;
 }
 
 .form-heading {
@@ -555,11 +556,6 @@ a:focus-visible {
 
 .storage-feature-eyebrow {
   margin: 0 0 0.75rem;
-  color: rgb(0, 160, 160);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
 }
 
 .storage-features-title {
@@ -655,39 +651,82 @@ a:focus-visible {
 
 /* MESSAGE */
 .security-message {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto clamp(2rem, 4vw, 4rem);
+  padding: 0 24px;
   text-align: left;
-  margin-left: 1rem;
-  max-width: 115ch;
-  width: min(95%, 115ch); /* same intent, simpler */
+}
+.security-eyebrow {
+  margin: 0 0 0.75rem;
 }
 .security-message h2 {
   margin: 0 0 0.75rem 0;
   padding: 0;
-  font-size: clamp(2.4rem, 6vw, 6rem);
+  color: rgb(6, 6, 50);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(32px, 5vw, 60px);
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.02em;
 }
-.security-message p {
+.security-message > p:not(.security-eyebrow) {
   margin: 0;
   padding: 0;
-  font-size: 1.1rem;
+  color: rgb(27, 27, 82);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.65;
 }
 
 /* MAP */
 .security-map {
-  margin-top: 2.5rem;
-  /* keep map aligned with text column on mobile */
-  width: min(100%, 40rem);
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left;
-  padding-inline: clamp(1rem, 3vw, 2rem);
-  padding-inline: clamp(1rem, 3vw, 2rem); /* already in mixin, but safe if you later remove it */
-  /* make the map responsive even without aspect-ratio support */
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  height: clamp(18rem, 52vw, 28rem);
+  overflow: hidden;
+  border: 1px solid rgba(6, 6, 50, 0.12);
+  border-radius: 0;
+  box-shadow: none;
 }
 .security-map iframe {
+  position: relative;
+  z-index: 0;
   width: 100%;
-  height: 320px; /* mobile default, overridden later */
+  height: 100%;
   border: 0;
   display: block;
+}
+.security-map-label {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  bottom: 0;
+  max-width: min(100%, 18rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.75rem 1rem;
+  color: #fff;
+  background: rgb(41, 38, 38);
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  pointer-events: none;
+}
+.security-map-label span {
+  color: aqua;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+.security-map-label strong {
+  color: #fff;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.1;
 }
 
 /* ICONS */
