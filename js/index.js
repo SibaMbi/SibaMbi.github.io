@@ -11,7 +11,7 @@ const testimonialRoot = document.querySelector('.testimonial-page');
 initTestimonialSlider(testimonialRoot);
 
 const dragContainers = document.querySelectorAll(
-  '.hero-features-list, .about-benefits, .services-grid'
+  '.storage-features-list, .about-benefits, .services-grid'
 );
 dragContainers.forEach(enableDragScrollX);
 

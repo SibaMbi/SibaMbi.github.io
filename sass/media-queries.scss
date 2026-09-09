@@ -446,6 +446,24 @@
 }
 
   @media (max-width: 767px) {
+    .site-header {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    .landing-page {
+      padding-top: 86px;
+    }
+
+    .storage-feature-image {
+      user-select: none;
+      -webkit-user-drag: none;
+      touch-action: pan-x;
+    }
+
     .mobile-menu-panel {
       position: relative;
       width: 100%;

@@ -192,23 +192,7 @@ a { @include link-aqua-underline; }
    HERO
 ========================= */
 .hero {
-  /* fallback for older/quirky browsers */
-  background-color: $bg;
-
-  background-image:
-    radial-gradient(
-      ellipse at 85% 25%,
-      #9fe7e5 0%,
-      #dff7f5 40%,
-      rgba(255,255,255,0) 50%
-    ),
-    linear-gradient(
-      135deg,
-      $bg 0%,
-      #f6fffd 55%,
-      #e6fbf8 100%
-    );
-
+  background-color: $topnav-bg;
   padding-bottom: 4rem;
   align-items: center;
 }
@@ -240,15 +224,29 @@ a { @include link-aqua-underline; }
   margin: 0 auto;
 }
 
-.hero-features {
+.storage-features {
   margin-top: 1.5rem;
+  padding-block: clamp(3rem, 5vw, 6rem);
+  background:
+    radial-gradient(
+      ellipse at 85% 25%,
+      #9fe7e5 0%,
+      #dff7f5 40%,
+      rgba(255, 255, 255, 0) 50%
+    ),
+    linear-gradient(
+      135deg,
+      $bg 0%,
+      #f6fffd 55%,
+      #e6fbf8 100%
+    );
 }
 
-.hero-features-list {
+.storage-features-list {
   @include make-scrollable;
   }
 
-.hero-feature-card {
+.storage-feature-card {
   @include scroll-feature;
   padding: 0.9rem 1rem;
   text-align: center;
@@ -262,15 +260,18 @@ a { @include link-aqua-underline; }
   }
 }
 
-.hero-feature-image {
+.storage-feature-image {
   display: block;
   max-width: 100%;
   height: 200px; // stable without negative margins
   object-fit: contain;
   margin: 0 auto 0.5rem auto;
+  user-select: none;
+  -webkit-user-drag: none;
+  touch-action: pan-x;
 }
 
-.hero-feature-title {
+.storage-feature-title {
   display: block;
   color: $ink;
   @include fluid-type(1.6rem, 2.5vw, 2.4rem);
@@ -278,7 +279,7 @@ a { @include link-aqua-underline; }
 }
 
 
-.hero-feature-text {
+.storage-feature-text {
   color: $ink-2;
   @include fluid-type(1.4rem, 2.5vw, 1.8rem);
   margin: 0 0 1rem 0;

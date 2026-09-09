@@ -134,7 +134,7 @@ $easing-standard: cubic-bezier(0.215, 0.610, 0.355, 1)  !default;
     }
 
     // Feature cards
-    .hero-feature-card {
+    .storage-feature-card {
         @include hidden-before-animate();
 
         &.is-visible {
@@ -144,19 +144,19 @@ $easing-standard: cubic-bezier(0.215, 0.610, 0.355, 1)  !default;
         &.we-store-card.is-visible  { animation-delay: 0.18s; }
         &.we-deliver-card.is-visible { animation-delay: 0.32s; }
 
-        .hero-feature-image { @include hidden-flipX(); }
+        .storage-feature-image { @include hidden-flipX(); }
 
-        &.is-visible .hero-feature-image {
+        &.is-visible .storage-feature-image {
             @include animate(flipX, 1s, $easing-snap, 0.18s);
         }
 
-        .hero-feature-title,
-        .hero-feature-text {
+        .storage-feature-title,
+        .storage-feature-text {
             @include hidden-before-animate(translateX(-50px));
         }
 
-        &.is-visible .hero-feature-title { @include animate(slideLeft, 1.1s, $easing-smooth, 0.35s); }
-        &.is-visible .hero-feature-text  { @include animate(slideLeft, 1.1s, $easing-smooth, 0.5s); }
+        &.is-visible .storage-feature-title { @include animate(slideLeft, 1.1s, $easing-smooth, 0.35s); }
+        &.is-visible .storage-feature-text  { @include animate(slideLeft, 1.1s, $easing-smooth, 0.5s); }
     }
 
     // About features

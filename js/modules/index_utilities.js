@@ -356,8 +356,7 @@ function animateAboutStatValue(statValueElement) {
 export function initRevealObserver() {
   const revealTargets = document.querySelectorAll(
     [
-      '.hero-visual',
-      '.hero-feature-card',
+      '.storage-feature-card',
       '.security-message',
       '.security-map',
       '.security-icon-card',

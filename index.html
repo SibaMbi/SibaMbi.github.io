@@ -81,38 +81,64 @@
         </header>
         <main class="landing-page">
             <section class="hero" aria-labelledby="hero-title">
-                <div class="landing-heading">
-                    <h1 id="hero-title" class="hero-title">
-                        Your Storage,<br>
-                        Simplified
-                    </h1>
+                <div class="hero-inner">
+                    <div class="hero-copy">
+                        <p class="hero-eyebrow">Easy Storage</p>
+                        <div class="hero-body">
+                            <h1 id="hero-title" class="hero-heading">
+                                Your Storage,
+                                <em class="hero-heading-em">Simplified.</em>
+                            </h1>
+                            <p class="hero-subtitle">
+                                Simple, secure, and scalable storage for students, movers, and growing businesses.
+                            </p>
+                        </div>
+                        <div class="hero-actions">
+                            <button class="btn-primary" type="button">Get Started</button>
+                        </div>
+                        <div class="hero-trust">
+                            <span class="hero-trust-dot" aria-hidden="true"></span>
+                            <span class="hero-trust-text">Secure · Insured · Monitored</span>
+                        </div>
+                    </div>
 
-                    <p class="hero-subtitle">
-                        Simple, secure, and scalable storage for students,<br>
-                         movers, and growing businesses.
-                    </p>
+                    <div class="hero-form-panel">
+                        <div>
+                            <p class="form-eyebrow">Free estimate</p>
+                            <h2 class="form-heading">Get a quote.</h2>
+                            <p class="form-subtext">Simple pricing. No hidden fees. We handle the rest.</p>
+                        </div>
 
-                    <!-- If this navigates somewhere, use <a>. If it opens a quote flow/modal, keep button. -->
-                    <button class="primary-cta btn btn-aqua-pill" type="button" aria-label="Get started with storage">
-                    Get Started
-                    </button>
+                        <form class="hero-form" action="#" method="post">
+                            <div class="form-field">
+                                <label for="collection-date">Collection date</label>
+                                <input type="date" id="collection-date" name="collection-date" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="return-date">Return date</label>
+                                <input type="date" id="return-date" name="return-date" required>
+                            </div>
+                            <button class="btn-submit" type="submit">
+                                Request quote
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true">
+                                    <path d="M5 12h14M13 6l6 6-6 6"/>
+                                </svg>
+                            </button>
+                            <p class="form-disclaimer">Free · No obligation · 24h response</p>
+                        </form>
+                    </div>
                 </div>
 
-                <div class="landing-visual">
-                    <img class="hero-visual"
-                    src="/images/concept_landing_page.png"
-                    alt="Illustration showing storage boxes and delivery collection"
-                    width="1200"
-                    height="800"
-                    loading="eager"
-                    decoding="async"
-                    >
-                </div>
-                <div class="hero-features" aria-label="How it works">
-                    <ul class="hero-features-list" role="list">
-                        <li class="hero-feature-card we-collect-card">
+            </section>
+
+            <section class="storage-features" aria-labelledby="storage-features-title">
+                <h2 id="storage-features-title" class="sr-only">How Easy Storage works</h2>
+                <div class="storage-features-content">
+                    <ul class="storage-features-list" role="list">
+                        <li class="storage-feature-card we-collect-card">
                             <img
-                            class="hero-feature-image"
+                            class="storage-feature-image"
                             src="/images/storage_feature.png"
                             alt=""
                             aria-hidden="true"
@@ -121,12 +147,12 @@
                             loading="lazy"
                             decoding="async"
                             >
-                            <h2 class="hero-feature-title">We collect</h2>
-                            <p class="hero-feature-text">From your doorstep, at a time<br> that suits you.</p>
+                            <h3 class="storage-feature-title">We collect</h3>
+                            <p class="storage-feature-text">From your doorstep, at a time<br> that suits you.</p>
                         </li>
-                        <li class="hero-feature-card we-store-card">
+                        <li class="storage-feature-card we-store-card">
                             <img
-                            class="hero-feature-image"
+                            class="storage-feature-image"
                             src="/images/warehouse_landing.png"
                             alt=""
                             aria-hidden="true"
@@ -135,12 +161,12 @@
                             loading="lazy"
                             decoding="async"
                             >
-                            <h2 class="hero-feature-title">We store</h2>
-                            <p class="hero-feature-text">Safely stored in our<br> secure facilities.</p>
+                            <h3 class="storage-feature-title">We store</h3>
+                            <p class="storage-feature-text">Safely stored in our<br> secure facilities.</p>
                         </li>
-                        <li class="hero-feature-card we-deliver-card">
+                        <li class="storage-feature-card we-deliver-card">
                             <img
-                            class="hero-feature-image"
+                            class="storage-feature-image"
                             src="/images/house_landing.png"
                             alt=""
                             aria-hidden="true"
@@ -149,8 +175,8 @@
                             loading="lazy"
                             decoding="async"
                             >
-                            <h2 class="hero-feature-title">We deliver</h2>
-                            <p class="hero-feature-text">Delivered whenever and<br> wherever you need.</p>
+                            <h3 class="storage-feature-title">We deliver</h3>
+                            <p class="storage-feature-text">Delivered whenever and<br> wherever you need.</p>
                         </li>
                     </ul>
                 </div>
@@ -227,52 +253,6 @@
                         </ul>
                     </div>
                 </div>
-            </section>
-
-            <section class="collection-form section" aria-labelledby="collection-title">
-                <form class="collection-form-inner" action="#" method="post">
-                    <div class="collection-page">
-                    <header class="collection-header">
-                        <h2 id="collection-title" class="collection-title">Organise your<br> storage</h2>
-                        <p class="collection-subtitle">Tell us where and when, we&#39;ll handle the rest</p>
-                    </header>
-
-                    <fieldset class="collection-fields" aria-describedby="collection-hint">
-                        <legend class="sr-only">Choose your dates</legend>
-                        <p id="collection-hint" class="sr-only">
-                        Select a collection date and a return date. Return date must be after collection date.
-                        </p>
-
-                        <div class="field">
-                        <label for="collection-date">Collection date</label>
-                        <input
-                            type="date"
-                            id="collection-date"
-                            name="collection-date"
-                            required
-                            autocomplete="off"
-                        >
-                        </div>
-
-                        <div class="field">
-                        <label for="return-date">Return date</label>
-                        <input
-                            type="date"
-                            id="return-date"
-                            name="return-date"
-                            required
-                            autocomplete="off"
-                        >
-                        </div>
-                    </fieldset>
-
-                    <div class="collection-action">
-                        <button class="collection-button btn btn-aqua-rect" type="submit">
-                        Get a quote
-                        </button>
-                    </div>
-                    </div>
-                </form>
             </section>
 
             <section class="about-us-page section" aria-labelledby="about-title">
