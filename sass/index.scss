@@ -418,7 +418,7 @@ a { @include link-aqua-underline; }
   margin: 0;
   color: $ink;
   font-family: Georgia, "Times New Roman", serif;
-  @include fluid-type(40px, 6vw, 72px);
+  @include fluid-type(32px, 5vw, 60px);
   line-height: 1.15;
   font-weight: 800;
   letter-spacing: -0.02em;

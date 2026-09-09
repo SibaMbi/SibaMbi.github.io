@@ -566,7 +566,7 @@ a:focus-visible {
   margin: 0;
   color: rgb(6, 6, 50);
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(40px, 6vw, 72px);
+  font-size: clamp(32px, 5vw, 60px);
   line-height: 1.15;
   font-weight: 800;
   letter-spacing: -0.02em;

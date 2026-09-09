@@ -773,47 +773,37 @@
     padding-top: 48px;
     gap: 28px;
   }
-
   .hero-heading {
     font-size: clamp(42px, 8vw, 56px);
   }
-
   .hero-subtitle {
     max-width: 34ch;
     font-size: 16px;
     line-height: 1.55;
   }
-
   .hero-form-panel {
     padding: 32px 0 48px;
     gap: 24px;
   }
-
   .hero-form {
     gap: 22px;
   }
-
   .storage-features {
     padding-block: 3.5rem;
   }
-
   .storage-features-list {
     gap: 0.5rem;
   }
-
   .storage-feature-card {
     width: min(100%, 280px);
     padding: 0.75rem;
   }
-
   .storage-feature-image {
     height: 220px;
   }
-
   .storage-feature-title {
     font-size: clamp(1.7rem, 3vw, 2rem);
   }
-
   .storage-feature-text {
     font-size: clamp(1.1rem, 2vw, 1.3rem);
   }
