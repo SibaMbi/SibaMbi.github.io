@@ -269,6 +269,31 @@
   animation-delay: 0.74s;
 }
 
+.form-heading,
+.form-subtext,
+.form-field,
+.btn-submit {
+  opacity: 0;
+  transform: translateY(40px);
+  will-change: transform, opacity;
+}
+
+.form-heading.is-visible {
+  animation: fadeInUp 1s cubic-bezier(0.22, 1, 0.36, 1) 0s 1 normal both;
+}
+
+.form-subtext.is-visible {
+  animation: fadeInUp 1s cubic-bezier(0.22, 1, 0.36, 1) 0.25s 1 normal both;
+}
+
+.form-field.is-visible {
+  animation: fadeInUp 1s cubic-bezier(0.22, 1, 0.36, 1) 0.5s 1 normal both;
+}
+
+.btn-submit.is-visible {
+  animation: bounceBottom 0.9s linear 0.7s 1 normal both;
+}
+
 .security-message {
   opacity: 0;
   transform: translateY(40px);

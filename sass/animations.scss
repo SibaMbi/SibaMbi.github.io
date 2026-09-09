@@ -191,6 +191,31 @@ $easing-standard: cubic-bezier(0.215, 0.610, 0.355, 1)  !default;
     }
 }
 
+@mixin hero-form-animations {
+    .form-heading,
+    .form-subtext,
+    .form-field,
+    .btn-submit {
+        @include hidden-before-animate();
+    }
+
+    .form-heading.is-visible {
+        @include animate(fadeInUp);
+    }
+
+    .form-subtext.is-visible {
+        @include animate(fadeInUp, 1s, $easing-smooth, 0.25s);
+    }
+
+    .form-field.is-visible {
+        @include animate(fadeInUp, 1s, $easing-smooth, 0.5s);
+    }
+
+    .btn-submit.is-visible {
+        @include animate(bounceBottom, 0.9s, linear, 0.7s);
+    }
+}
+
 @mixin security-animations {
     .security-message {
         @include hidden-before-animate();
@@ -312,6 +337,7 @@ $easing-standard: cubic-bezier(0.215, 0.610, 0.355, 1)  !default;
 }
 
 @include hero-animations();
+@include hero-form-animations();
 @include security-animations();
 @include about-us-animations();
 @include services-animations();
