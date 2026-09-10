@@ -57,6 +57,19 @@ p {
   margin: 0;
 }
 
+.accent-text {
+  color: aqua;
+}
+
+.is-disabled,
+.is-disabled:hover,
+.is-disabled:active {
+  cursor: not-allowed;
+  opacity: 0.55;
+  box-shadow: none;
+  transform: none;
+}
+
 a {
   text-decoration: none;
 }

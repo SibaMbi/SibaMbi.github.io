@@ -46,6 +46,17 @@ img {
 h1, h2, h3, h4, h5 { color: $ink; margin: 0; }
 p { color: $ink-2; margin: 0; }
 
+.accent-text { color: $accent; }
+
+.is-disabled,
+.is-disabled:hover,
+.is-disabled:active {
+  cursor: not-allowed;
+  opacity: 0.55;
+  box-shadow: none;
+  transform: none;
+}
+
 a { @include link-aqua-underline; }
 
 /* =========================

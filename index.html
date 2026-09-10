@@ -17,16 +17,16 @@
         <!-- Top services nav -->
         <nav class="top-nav" aria-label="Service categories">
             <ul class="top-nav-list" id="top-menu">
-            <li class="top-nav-item"><a class="top-nav-link" href="#">Personal Storage</a></li>
-            <li class="top-nav-item"><a class="top-nav-link" href="#">Business Storage</a></li>
-            <li class="top-nav-item"><a class="top-nav-link" href="#">Relocation Services</a></li>
-            <li class="top-nav-item"><a class="top-nav-link" href="#">Logistics Solutions</a></li>
+            <li class="top-nav-item"><a class="top-nav-link" href="#storage-features-title">Personal Storage</a></li>
+            <li class="top-nav-item"><a class="top-nav-link" href="#services-title">Business Storage</a></li>
+            <li class="top-nav-item"><a class="top-nav-link" href="#services-title">Relocation Services</a></li>
+            <li class="top-nav-item"><a class="top-nav-link" href="#services-title">Logistics Solutions</a></li>
             </ul>
         </nav>
 
         <!-- Main nav -->
         <nav class="main-nav" aria-label="Main navigation">
-            <a class="site-logo" href="#" aria-label="Home">
+            <a class="site-logo" href="index.html" aria-label="Home">
             <img src="/images/logo.png" alt="Easy Storage">
             </a>
 
@@ -44,13 +44,13 @@
             </button>
 
             <ul class="main-nav-list" id="main-menu">
-            <li class="main-nav-item"><a class="main-nav-link" href="#">Services</a></li>
-            <li class="main-nav-item"><a class="main-nav-link" href="#">Prices</a></li>
-            <li class="main-nav-item"><a class="main-nav-link" href="#">Store Locator</a></li>
-            <li class="main-nav-item"><a class="main-nav-link" href="#">About Us</a></li>
+            <li class="main-nav-item"><a class="main-nav-link" href="#services-title">Services</a></li>
+            <li class="main-nav-item"><a class="main-nav-link" href="#quote-form">Prices</a></li>
+            <li class="main-nav-item"><a class="main-nav-link" href="#security-title">Store Locator</a></li>
+            <li class="main-nav-item"><a class="main-nav-link" href="#about-title">About Us</a></li>
 
             <li class="main-nav-item main-nav-item--cta">
-                <a class="main-nav-cta main-nav-link" href="#">Sign In</a>
+                <button class="main-nav-cta main-nav-link is-disabled" type="button" disabled aria-disabled="true">Sign In</button>
             </li>
             </ul>
         </nav>
@@ -58,22 +58,22 @@
         <div class="mobile-menu-panel" id="mobile-menu-panel">
             <nav class="top-nav" aria-label="Service categories">
                 <ul class="top-nav-list" id="mobile-top-menu">
-                <li class="top-nav-item"><a class="top-nav-link" href="#">Personal Storage</a></li>
-                <li class="top-nav-item"><a class="top-nav-link" href="#">Business Storage</a></li>
-                <li class="top-nav-item"><a class="top-nav-link" href="#">Relocation Services</a></li>
-                <li class="top-nav-item"><a class="top-nav-link" href="#">Logistics Solutions</a></li>
+                <li class="top-nav-item"><a class="top-nav-link" href="#storage-features-title">Personal Storage</a></li>
+                <li class="top-nav-item"><a class="top-nav-link" href="#services-title">Business Storage</a></li>
+                <li class="top-nav-item"><a class="top-nav-link" href="#services-title">Relocation Services</a></li>
+                <li class="top-nav-item"><a class="top-nav-link" href="#services-title">Logistics Solutions</a></li>
                 </ul>
             </nav>
 
             <nav class="main-nav" aria-label="Main navigation">
                 <ul class="main-nav-list" id="mobile-main-menu">
-                <li class="main-nav-item"><a class="main-nav-link" href="#">Services</a></li>
-                <li class="main-nav-item"><a class="main-nav-link" href="#">Prices</a></li>
-                <li class="main-nav-item"><a class="main-nav-link" href="#">Store Locator</a></li>
-                <li class="main-nav-item"><a class="main-nav-link" href="#">About Us</a></li>
+                <li class="main-nav-item"><a class="main-nav-link" href="#services-title">Services</a></li>
+                <li class="main-nav-item"><a class="main-nav-link" href="#quote-form">Prices</a></li>
+                <li class="main-nav-item"><a class="main-nav-link" href="#security-title">Store Locator</a></li>
+                <li class="main-nav-item"><a class="main-nav-link" href="#about-title">About Us</a></li>
 
                 <li class="main-nav-item main-nav-item--cta">
-                    <a class="main-nav-cta main-nav-link" href="#">Sign In</a>
+                    <button class="main-nav-cta main-nav-link is-disabled" type="button" disabled aria-disabled="true">Sign In</button>
                 </li>
                 </ul>
             </nav>
@@ -94,7 +94,7 @@
                             </p>
                         </div>
                         <div class="hero-actions">
-                            <button class="btn-primary" type="button">Get Started</button>
+                            <a class="btn-primary" href="#quote-form">Get Started</a>
                         </div>
                         <div class="hero-trust">
                             <span class="hero-trust-dot" aria-hidden="true"></span>
@@ -109,7 +109,7 @@
                             <p class="form-subtext">Simple pricing, with accurate estimates and no hidden fees.</p>
                         </div>
 
-                        <form class="hero-form" action="#" method="post">
+                        <form class="hero-form" id="quote-form" action="mailto:hello@easystorage.co.za" method="post" enctype="text/plain">
                             <div class="form-field">
                                 <label for="collection-date">Collection date</label>
                                 <input type="date" id="collection-date" name="collection-date" required>
@@ -119,7 +119,7 @@
                                 <input type="date" id="return-date" name="return-date" required>
                             </div>
                             <button class="btn-submit" type="submit">
-                                Request quote
+                                See Prices
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                     stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true">
                                     <path d="M5 12h14M13 6l6 6-6 6"/>
@@ -200,7 +200,6 @@
                     <iframe
                     title="Map showing our service area"
                     src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d27067.312062400953!2d26.2658964!3d-32.003897300000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sza!4v1768416649172!5m2!1sen!2sza"
-                    style="border:0;"
                     loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"
                     allowfullscreen
@@ -267,7 +266,7 @@
             <section class="about-us-page section" aria-labelledby="about-title">
                 <div class="about-sales">
                     <header class="about-header">
-                    <h2 id="about-title" class="about-us-title">Trusted, proven and built for <span style="color: aqua;">reliability</span></h2>
+                    <h2 id="about-title" class="about-us-title">Trusted, proven and built for <span class="accent-text">reliability</span></h2>
                     </header>
 
                     <dl class="about-stats" aria-label="Company highlights">
@@ -409,7 +408,7 @@
                     Our personal storage service is designed for everyday life changes, whether you're storing seasonal items,
                     moving between places, studying, or simply freeing up space at home.
                 </p>
-                <a class="service-link" href="#">Learn more</a>
+                <a class="service-link" href="#storage-features-title">Learn more</a>
                 </div>
                 </li>
 
@@ -429,7 +428,7 @@
                     Business storage built for flexibility and growth. We store inventory, equipment, documents, and operational assets
                     for businesses that need space without long-term commitments.
                 </p>
-                <a class="service-link" href="#">Learn more</a>
+                <a class="service-link" href="#storage-features-title">Learn more</a>
                 </div>
                 </li>
 
@@ -454,7 +453,7 @@
                     Our moving service focuses on direct, efficient relocations from Point A to Point B.
                     We handle home and office moves with careful loading, secure transport, and timely delivery.
                 </p>
-                <a class="service-link" href="#">Learn more</a>
+                <a class="service-link" href="#security-title">Learn more</a>
                 </div>
                 </li>
 
@@ -484,7 +483,7 @@
                     Our logistics service supports businesses that require consistent, ongoing movement of goods.
                     We manage scheduled collections, stock transfers, and repeat deliveries with reliability and precision.
                 </p>
-                <a class="service-link" href="#">Learn more</a>
+                <a class="service-link" href="#security-title">Learn more</a>
                 </div>
                 </li>
             </ul>
@@ -585,11 +584,11 @@
                     </header>
 
                     <div class="cta-actions" aria-label="Call to action buttons">
-                        <button class="action cta-action-button btn btn-light-rect" id="quote-button" type="button">
+                        <a class="action cta-action-button btn btn-light-rect" id="quote-button" href="#quote-form">
                             Get A Quote
-                        </button>
+                        </a>
 
-                        <button class="action cta-action-button btn btn-light-rect" id="sign-in-button" type="button">
+                        <button class="action cta-action-button btn btn-light-rect is-disabled" id="sign-in-button" type="button" disabled aria-disabled="true">
                             Sign Up
                         </button>
                     </div>
@@ -605,7 +604,7 @@
                     <p>Leave your details and we&#39;ll point you in the right direction.</p>
                 </header>
 
-                    <form class="footer-contact-form" action="#" method="post">
+                    <form class="footer-contact-form" id="contact-form" action="mailto:hello@easystorage.co.za" method="post" enctype="text/plain">
                         <div class="contact-field">
                             <label for="user-email">Email Address</label>
                             <input
@@ -652,25 +651,25 @@
                     <nav class="service-links" aria-label="Services links">
                         <h3 class="footer-title">Services</h3>
                         <ul class="footer-list" role="list">
-                            <li><a href="#">Personal storage</a></li>
-                            <li><a href="#">Business storage</a></li>
-                            <li><a href="#">Moving</a></li>
-                            <li><a href="#">Logistics</a></li>
+                            <li><a href="#storage-features-title">Personal storage</a></li>
+                            <li><a href="#services-title">Business storage</a></li>
+                            <li><a href="#services-title">Moving</a></li>
+                            <li><a href="#services-title">Logistics</a></li>
                         </ul>
                     </nav>
 
                     <nav class="company-links" aria-label="Company links">
                         <h3 class="footer-title">Company</h3>
                         <ul class="footer-list" role="list">
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Pricing</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="#">Insurance</a></li>
+                            <li><a href="#about-title">About us</a></li>
+                            <li><a href="#quote-form">Pricing</a></li>
+                            <li><a href="mailto:careers@easystorage.co.za">Careers</a></li>
+                            <li><a href="#security-title">Insurance</a></li>
                         </ul>
                     </nav>
                 </div>
                 <div class="socials" aria-label="Social links">
-                    <a class="social-link" href="#" aria-label="Instagram">
+                    <span class="social-link is-disabled" aria-label="Instagram unavailable" aria-disabled="true">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="1.8"
                         stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -678,27 +677,27 @@
                         <circle cx="12" cy="12" r="4"/>
                         <path d="M16.8 7.2h.01"/>
                         </svg>
-                    </a>
+                    </span>
 
-                    <a class="social-link" href="#" aria-label="Facebook">
+                    <span class="social-link is-disabled" aria-label="Facebook unavailable" aria-disabled="true">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="1.8"
                         stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <rect x="3.5" y="3.5" width="17" height="17" rx="4"/>
                         <path d="M13.5 21v-7h2.2l.4-2.6h-2.6V9.8c0-.8.2-1.3 1.4-1.3h1.3V6.2c-.6-.1-1.3-.2-2.1-.2-2.1 0-3.5 1.3-3.5 3.7V11H8.5v2.6h2.1v7"/>
                         </svg>
-                    </a>
+                    </span>
 
-                    <a class="social-link" href="#" aria-label="WhatsApp">
+                    <span class="social-link is-disabled" aria-label="WhatsApp unavailable" aria-disabled="true">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="1.8"
                         stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <path d="M20 11.7c0 4.4-3.6 8-8 8-1.3 0-2.6-.3-3.7-.9L4 20l1.2-4.1c-.7-1.2-1-2.6-1-4.2 0-4.4 3.6-8 8-8s8 3.6 8 8z"/>
                         <path d="M9.2 8.8c.2-.5.4-.6.8-.6h.6c.2 0 .4 0 .6.5l.7 1.7c.1.3.1.5 0 .7l-.4.5c-.2.2-.2.4 0 .7.4.7 1.2 1.6 2.2 2.2.3.2.5.2.7 0l.6-.4c.2-.1.4-.1.7 0l1.7.7c.4.2.5.4.5.6v.6c0 .4-.2.7-.6.8-.6.2-1.8.5-3.5-.3-1.8-.8-3.2-2.3-4-4-.8-1.7-.5-2.9-.3-3.5z"/>
                         </svg>
-                    </a>
+                    </span>
 
-                    <a class="social-link" href="#" aria-label="LinkedIn">
+                    <span class="social-link is-disabled" aria-label="LinkedIn unavailable" aria-disabled="true">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="1.8"
                         stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -708,7 +707,7 @@
                         <path d="M11 17v-3.6c0-1.5.6-2.4 2-2.4 1.2 0 1.8.9 1.8 2.4V17"/>
                         <path d="M11 10.5V17"/>
                         </svg>
-                    </a>
+                    </span>
                 </div>
             </div>
         </footer>

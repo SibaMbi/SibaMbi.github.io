@@ -117,24 +117,24 @@ $easing-standard: cubic-bezier(0.215, 0.610, 0.355, 1)  !default;
 // =============================================================================
 
 @mixin hero-animations {
-    .hero-heading  { @include hidden-before-animate(translateX(-100px)); }
-    .hero-subtitle { @include hidden-before-animate(translateX(-100px)); }
-    .btn-primary   { @include hidden-before-animate(translateX(-100px)); }
+    .hero-heading  { @include hidden-before-animate(translateX(-24px)); }
+    .hero-subtitle { @include hidden-before-animate(translateX(-24px)); }
+    .btn-primary   { @include hidden-before-animate(translateX(-24px)); }
 
     .hero-heading,
     .hero-subtitle,
     .btn-primary {
-        @include animate(slideLeft, 3.1s, $easing-spring, 0.05s);
+        @include animate(slideLeft, 0.55s, $easing-smooth, 0.05s);
     }
-    .hero-subtitle { animation-delay: 0.7s; }
-    .btn-primary   { animation-delay: 1.2s; }
+    .hero-subtitle { animation-delay: 0.16s; }
+    .btn-primary   { animation-delay: 0.28s; }
 
     // Feature cards
     .storage-feature-card {
         @include hidden-before-animate();
 
         &.is-visible {
-            @include animate(slideUp, 1.2s);
+            @include animate(slideUp, 0.5s);
         }
 
         &.we-store-card.is-visible  { animation-delay: 0.18s; }
@@ -143,7 +143,7 @@ $easing-standard: cubic-bezier(0.215, 0.610, 0.355, 1)  !default;
         .storage-feature-image { @include hidden-flipX(); }
 
         &.is-visible .storage-feature-image {
-            @include animate(flipX, 1s, $easing-snap, 0.18s);
+            @include animate(fadeInUp, 0.45s, $easing-smooth, 0.08s);
         }
 
         .storage-feature-title,
@@ -151,15 +151,15 @@ $easing-standard: cubic-bezier(0.215, 0.610, 0.355, 1)  !default;
             @include hidden-before-animate(translateX(-50px));
         }
 
-        &.is-visible .storage-feature-title { @include animate(slideLeft, 1.1s, $easing-smooth, 0.35s); }
-        &.is-visible .storage-feature-text  { @include animate(slideLeft, 1.1s, $easing-smooth, 0.5s); }
+        &.is-visible .storage-feature-title { @include animate(slideLeft, 0.45s, $easing-smooth, 0.12s); }
+        &.is-visible .storage-feature-text  { @include animate(slideLeft, 0.45s, $easing-smooth, 0.18s); }
     }
 
     .storage-features-header {
         @include hidden-before-animate();
 
         &.is-visible {
-            @include animate(slideUp, 1.2s);
+            @include animate(slideUp, 0.5s);
         }
     }
 
@@ -178,7 +178,7 @@ $easing-standard: cubic-bezier(0.215, 0.610, 0.355, 1)  !default;
         .about-icon { @include hidden-flipX(); }
 
         &.is-visible .about-icon {
-            @include animate(flipX, 1s, $easing-snap, 0.18s);
+            @include animate(fadeInUp, 0.45s, $easing-smooth, 0.08s);
         }
 
         .about-feature-title,
@@ -187,11 +187,11 @@ $easing-standard: cubic-bezier(0.215, 0.610, 0.355, 1)  !default;
         }
 
         &.is-visible .about-feature-title {
-            @include animate(slideLeft, 1.1s, $easing-smooth, 0.35s);
+            @include animate(slideLeft, 0.45s, $easing-smooth, 0.12s);
         }
 
         &.is-visible .about-feature-list li {
-            @include animate(slideLeft, 1.1s, $easing-smooth, 0.5s);
+            @include animate(slideLeft, 0.45s, $easing-smooth, 0.18s);
 
             &:nth-child(2) { animation-delay: 0.62s; }
             &:nth-child(3) { animation-delay: 0.74s; }
@@ -208,19 +208,19 @@ $easing-standard: cubic-bezier(0.215, 0.610, 0.355, 1)  !default;
     }
 
     .form-heading.is-visible {
-        @include animate(fadeInUp);
+        @include animate(fadeInUp, 0.45s);
     }
 
     .form-subtext.is-visible {
-        @include animate(fadeInUp, 1s, $easing-smooth, 0.25s);
+        @include animate(fadeInUp, 0.45s, $easing-smooth, 0.08s);
     }
 
     .form-field.is-visible {
-        @include animate(fadeInUp, 1s, $easing-smooth, 0.5s);
+        @include animate(fadeInUp, 0.45s, $easing-smooth, 0.16s);
     }
 
     .btn-submit.is-visible {
-        @include animate(bounceBottom, 0.9s, linear, 0.7s);
+        @include animate(fadeInUp, 0.45s, $easing-smooth, 0.24s);
     }
 }
 
@@ -228,7 +228,7 @@ $easing-standard: cubic-bezier(0.215, 0.610, 0.355, 1)  !default;
     .security-message {
         @include hidden-before-animate();
 
-        &.is-visible { @include animate(fadeInUp); }
+        &.is-visible { @include animate(fadeInUp, 0.5s); }
     }
 
     .security-map {
@@ -236,15 +236,16 @@ $easing-standard: cubic-bezier(0.215, 0.610, 0.355, 1)  !default;
         will-change: transform, opacity;
 
         &.is-visible {
-            @include animate(scaleIn, 1.2s, cubic-bezier(0.25, 0.46, 0.45, 0.94));
+            @include animate(fadeInUp, 0.5s, $easing-smooth);
         }
     }
 
     @media (prefers-reduced-motion: reduce) {
-        .security-icons-track,
-        .security-icons-track > .security-icons-list:first-child,
-        .storage-features-header {
+        *,
+        *::before,
+        *::after {
             animation: none !important;
+            transition: none !important;
             transform: none !important;
             opacity: 1 !important;
         }
@@ -255,13 +256,13 @@ $easing-standard: cubic-bezier(0.215, 0.610, 0.355, 1)  !default;
     .about-us-title {
         @include hidden-before-animate(translateX(-50px));
 
-        &.is-visible { @include animate(slideLeft, 1.1s, $easing-smooth, 0.35s); }
+        &.is-visible { @include animate(slideLeft, 0.45s, $easing-smooth, 0.08s); }
     }
 
     .about-stat {
         @include hidden-before-animate();
 
-        &.is-visible { @include animate(fadeInUp, 1s, $easing-smooth, 0.5s); }
+        &.is-visible { @include animate(fadeInUp, 0.45s, $easing-smooth, 0.12s); }
     }
 }
 
@@ -271,14 +272,14 @@ $easing-standard: cubic-bezier(0.215, 0.610, 0.355, 1)  !default;
         @include hidden-before-animate();
     }
 
-    .services-message.is-visible .services-title    { @include animate(fadeInUp); }
-    .services-message.is-visible .services-subtitle { @include animate(fadeInUp, 1s, $easing-smooth, 0.22s); }
+    .services-message.is-visible .services-title    { @include animate(fadeInUp, 0.45s); }
+    .services-message.is-visible .services-subtitle { @include animate(fadeInUp, 0.45s, $easing-smooth, 0.08s); }
 
     .service-card {
         @include hidden-before-animate();
 
         &.is-visible {
-            @include animate(slideUp, 1.2s);
+            @include animate(slideUp, 0.5s);
 
             &:nth-child(2) { animation-delay: 0.18s; }
             &:nth-child(3) { animation-delay: 0.32s; }
@@ -288,7 +289,7 @@ $easing-standard: cubic-bezier(0.215, 0.610, 0.355, 1)  !default;
         .service-icon { @include hidden-flipX(); }
 
         &.is-visible .service-icon {
-            @include animate(flipX, 1s, $easing-snap, 0.18s);
+            @include animate(fadeInUp, 0.45s, $easing-smooth, 0.08s);
         }
 
         .service-title,
@@ -297,9 +298,9 @@ $easing-standard: cubic-bezier(0.215, 0.610, 0.355, 1)  !default;
             @include hidden-before-animate(translateX(-50px));
         }
 
-        &.is-visible .service-title { @include animate(slideLeft, 1.1s, $easing-smooth, 0.35s); }
-        &.is-visible .service-text  { @include animate(slideLeft, 1.1s, $easing-smooth, 0.5s); }
-        &.is-visible .service-link  { @include animate(slideLeft, 1.1s, $easing-smooth, 0.64s); }
+        &.is-visible .service-title { @include animate(slideLeft, 0.45s, $easing-smooth, 0.12s); }
+        &.is-visible .service-text  { @include animate(slideLeft, 0.45s, $easing-smooth, 0.18s); }
+        &.is-visible .service-link  { @include animate(slideLeft, 0.45s, $easing-smooth, 0.24s); }
     }
 }
 
@@ -312,10 +313,7 @@ $easing-standard: cubic-bezier(0.215, 0.610, 0.355, 1)  !default;
     .testimonial-left.is-visible .testimonial-header h2 { @include animate(slideLeft, 1.1s); }
     .testimonial-left.is-visible .testimonial-header p  { @include animate(slideLeft, 1.1s, $easing-smooth, 0.2s); }
 
-    .customer-quote p {
-        min-height: 5.8em;
-        opacity: 0;
-    }
+    .customer-quote p { min-height: 5.8em; opacity: 1; }
 }
 
 @mixin cta-animations {
@@ -325,7 +323,7 @@ $easing-standard: cubic-bezier(0.215, 0.610, 0.355, 1)  !default;
     }
 
     .cta-inner.is-visible .cta-title {
-        @include animate(trackingExpand, 1.5s, $easing-standard);
+        @include animate(fadeInUp, 0.5s, $easing-smooth);
     }
 
     .cta-action-button {
@@ -336,7 +334,7 @@ $easing-standard: cubic-bezier(0.215, 0.610, 0.355, 1)  !default;
     }
 
     .cta-inner.is-visible .cta-action-button {
-        @include animate(bounceBottom, 1.25s, linear, 0.28s);
+        @include animate(fadeInUp, 0.45s, $easing-smooth, 0.12s);
 
         &:nth-child(2) { animation-delay: 0.48s; }
 
