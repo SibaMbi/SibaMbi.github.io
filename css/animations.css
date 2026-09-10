@@ -321,11 +321,10 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
+  .security-icons-track,
+  .security-icons-track > .security-icons-list:first-child,
+  .storage-features-header {
     animation: none !important;
-    transition: none !important;
     transform: none !important;
     opacity: 1 !important;
   }
