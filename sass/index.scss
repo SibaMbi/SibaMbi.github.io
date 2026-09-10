@@ -303,9 +303,14 @@ a { @include link-aqua-underline; }
 .form-eyebrow { margin-bottom: 8px; }
 
 .form-heading {
-  color: $accent;
+  color: white;
   font-size: 40px;
   line-height: 1;
+}
+
+.form-heading-em{
+  color: aqua;
+  font-style: italic;
 }
 
 .form-subtext {
@@ -410,7 +415,7 @@ a { @include link-aqua-underline; }
   margin: 0;
   color: $ink;
   font-family: $font-display;
-  @include fluid-type(32px, 5vw, 60px);
+  @include fluid-type(35px, 5vw, 60px);
   line-height: 1.15;
   font-weight: 800;
   letter-spacing: -0.02em;
@@ -497,7 +502,7 @@ a { @include link-aqua-underline; }
     padding: 0;
     color: $ink;
     font-family: $font-display;
-    @include fluid-type(32px, 5vw, 60px);
+    @include fluid-type(34px, 5vw, 60px);
     line-height: 1.15;
     font-weight: 800;
     letter-spacing: -0.02em;

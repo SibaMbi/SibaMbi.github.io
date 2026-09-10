@@ -587,7 +587,7 @@
     width: 100%;
     margin: 0;
     height: auto;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 16/9;
   }
   .security-map iframe {
     width: 100%;
