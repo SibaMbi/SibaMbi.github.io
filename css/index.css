@@ -660,6 +660,7 @@ a:focus-visible {
 .storage-feature-text {
   color: rgb(27, 27, 82);
   font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+  max-width: 28ch;
   margin: 0 0 1rem 0;
 }
 
@@ -1008,7 +1009,7 @@ a:focus-visible {
 }
 
 .service-text {
-  font-size: 12px;
+  font-size: 1rem;
   color: #393c43;
   font-weight: 300;
   line-height: 1.65;
