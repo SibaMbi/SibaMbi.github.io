@@ -87,14 +87,13 @@
 }
 @keyframes trackingExpand {
   0% {
-    transform: translateY(0.35em);
+    letter-spacing: -0.5em;
     opacity: 0;
   }
   40% {
     opacity: 0.6;
   }
   100% {
-    transform: translateY(0);
     opacity: 1;
   }
 }
