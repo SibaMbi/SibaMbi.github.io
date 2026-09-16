@@ -427,9 +427,7 @@ a { @include link-aqua-underline; }
   color: $ink;
   font-family: $font-display;
   @include fluid-type(33px, 5vw, 60px);
-  line-height: 1.15;
-  font-weight: 800;
-  letter-spacing: -0.02em;
+  @include heading-style;
 }
 
 .storage-features-subtitle {
@@ -514,9 +512,7 @@ a { @include link-aqua-underline; }
     color: $ink;
     font-family: $font-display;
     @include fluid-type(34px, 5vw, 60px);
-    line-height: 1.15;
-    font-weight: 800;
-    letter-spacing: -0.02em;
+    @include heading-style;
   }
 
   > p:not(.security-eyebrow) {
