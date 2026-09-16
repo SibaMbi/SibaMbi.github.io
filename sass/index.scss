@@ -426,7 +426,7 @@ a { @include link-aqua-underline; }
   margin: 0;
   color: $ink;
   font-family: $font-display;
-  @include fluid-type(33px, 5vw, 60px);
+  @include fluid-type(36px, 5vw, 60px);
   @include heading-style;
 }
 
@@ -511,7 +511,7 @@ a { @include link-aqua-underline; }
     padding: 0;
     color: $ink;
     font-family: $font-display;
-    @include fluid-type(34px, 5vw, 60px);
+    @include fluid-type(36px, 5vw, 60px);
     @include heading-style;
   }
 
