@@ -414,35 +414,30 @@
    (full header layout)
 ========================= */
 @media (min-width: 768px) {
+  .site-header {
+    position: static;
+  }
   .menu-icon {
     display: none;
   }
   .mobile-menu-panel {
     display: none;
   }
-  /* Always show top nav on desktop */
-  .top-nav-list {
-    display: flex !important;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.5rem;
+  .site-header > .top-nav {
+    display: none;
   }
-  .top-nav-link {
-    display: inline-block;
-    padding: 0.3em 0.7em;
-    border: thin solid #fff;
-    border-radius: 15px;
-  }
-  .top-nav-link:hover {
-    border-color: aqua;
-    text-decoration: none;
-  }
-  /* Main nav stays a single row */
   .main-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
     flex-wrap: nowrap;
     align-items: center;
   }
-  /* Always show main links on desktop */
+  .landing-page {
+    padding-top: 7rem;
+  }
   .main-nav-list {
     display: flex !important;
     flex-direction: row;
@@ -458,6 +453,43 @@
   .main-nav-link {
     display: inline-block;
     padding: 1.2em 0.7em;
+  }
+  .main-nav-item--services {
+    position: relative;
+  }
+  .services-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1001;
+    display: grid;
+    gap: 0.25rem;
+    min-width: 14rem;
+    margin: 0;
+    padding: 0.65rem;
+    list-style: none;
+    background-color: rgb(41, 38, 38);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-0.35rem);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  }
+  .main-nav-item--services:hover .services-dropdown,
+  .main-nav-item--services:focus-within .services-dropdown {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+  }
+  .services-dropdown-link {
+    display: block;
+    padding: 0.65rem 0.75rem;
+    color: #fff;
+    white-space: nowrap;
+  }
+  .services-dropdown-link:hover {
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.12);
   }
   .site-logo img {
     height: 80px;
