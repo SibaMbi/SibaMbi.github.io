@@ -457,7 +457,7 @@
   .main-nav-item--services {
     position: relative;
   }
-  .services-dropdown {
+  .main-nav-item--services .services-dropdown {
     position: absolute;
     top: 100%;
     left: 0;
@@ -475,19 +475,18 @@
     transform: translateY(-0.35rem);
     transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
   }
-  .main-nav-item--services:hover .services-dropdown,
-  .main-nav-item--services:focus-within .services-dropdown {
+  .main-nav-item--services:hover .services-dropdown, .main-nav-item--services:focus-within .services-dropdown {
     opacity: 1 !important;
     visibility: visible !important;
     transform: translateY(0) !important;
   }
-  .services-dropdown-link {
+  .main-nav-item--services .services-dropdown-link {
     display: block;
     padding: 0.65rem 0.75rem;
     color: #fff;
     white-space: nowrap;
   }
-  .services-dropdown-link:hover {
+  .main-nav-item--services .services-dropdown-link:hover {
     text-decoration: none;
     background-color: rgba(255, 255, 255, 0.12);
   }
